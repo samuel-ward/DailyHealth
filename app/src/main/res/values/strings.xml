@@ -19,4 +19,8 @@
     <string name="health_record">Your Health Record</string>
     <string name="appointment">Make An Appointment</string>
     <string name="direct_support">Ask For Direct Support</string>
+
+    <!-- Disease Intro -->
+    <string name="library">LIBRARY</string>
+
 </resources>
