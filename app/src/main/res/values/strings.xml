@@ -22,5 +22,8 @@
 
     <!-- Disease Intro -->
     <string name="library">LIBRARY</string>
+    <string name="asthma">Asthma</string>
+    <string name="diabetes">Diabetes</string>
+    <string name="back_arrow">Back Arrow</string>
 
 </resources>

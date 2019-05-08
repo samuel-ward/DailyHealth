@@ -14,11 +14,10 @@
         android:orientation="vertical">
 
         <!-- Header -->
-        <LinearLayout
+        <RelativeLayout
             android:id="@+id/header_diseas_intro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="100dp"
             android:orientation="horizontal">
 
             <TextView
@@ -26,11 +25,30 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
+                android:paddingTop="100dp"
                 android:text="@string/disease_intro"
                 android:textAlignment="gravity"
-                android:textSize="35sp"/>
+                android:textSize="35sp" />
 
-        </LinearLayout>
+            <ImageView
+                android:id="@+id/icon_back_arrow"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="76dp"
+                android:contentDescription="@string/back_arrow"
+                app:srcCompat="@drawable/ic_arrow_back_black_24dp"
+                android:tint="@color/design_default_color_primary_dark" />
+
+            <ImageView
+                android:id="@+id/icon_disease_intro"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignParentEnd="true"
+                android:contentDescription="@string/diabetes"
+                app:srcCompat="@drawable/ic_introduction"
+                android:tint="@color/design_default_color_primary"/>
+
+        </RelativeLayout>
 
         <!-- Library -->
         <TextView
@@ -55,29 +73,59 @@
                 android:orientation="vertical">
 
                 <LinearLayout
-                    android:id="@+id/container_homepage_dieseaseintro"
+                    android:id="@+id/container_disease_intro_asthma"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
                     <ImageView
-                        android:id="@+id/img_homepage_dieseaseintro"
+                        android:id="@+id/img_disease_intro_asthma"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="5"
                         android:scaleType="fitXY"
                         android:adjustViewBounds="true"
-                        android:src="@drawable/ic_test"
-                        android:contentDescription="@string/disease_intro"/>
+                        android:src="@drawable/ic_asthma"
+                        android:contentDescription="@string/asthma"/>
 
 
                     <TextView
-                        android:id="@+id/lbl_homepage_diseaseintro"
+                        android:id="@+id/lbl_disease_intro_asthma"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:layout_gravity="center_vertical"
-                        android:text="@string/disease_intro"
+                        android:text="@string/asthma"
+                        android:textAlignment="gravity"
+                        android:textSize="20sp"
+                        android:layout_marginStart="20sp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/container_disease_intro_diabetes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/img_disease_intro_diabetes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:scaleType="fitXY"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/ic_diabetes"
+                        android:contentDescription="@string/diabetes"/>
+
+
+                    <TextView
+                        android:id="@+id/lbl_disease_intro_diabetes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/diabetes"
                         android:textAlignment="gravity"
                         android:textSize="20sp"
                         android:layout_marginStart="20sp"/>
