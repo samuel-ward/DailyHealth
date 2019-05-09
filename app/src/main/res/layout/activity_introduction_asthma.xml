@@ -3,10 +3,10 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/disease_intro_page"
+    android:id="@+id/intro_asthma_page"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DiseaseIntro">
+    tools:context=".IntroductionAsthma">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,7 +15,7 @@
 
         <!-- Header -->
         <RelativeLayout
-            android:id="@+id/header_disease_intro"
+            android:id="@+id/header"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
@@ -91,7 +91,7 @@
                      android:textStyle="bold" />
 
                  <TextView
-                     android:id="@+id/lbl_intro_asthma_p4"
+                     android:id="@+id/lbl_intro_asthma_p2"
                      android:layout_width="match_parent"
                      android:layout_height="wrap_content"
                      android:paddingTop="10dp"
