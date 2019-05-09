@@ -14,7 +14,7 @@
         android:orientation="vertical">
 
         <!-- Header -->
-        <LinearLayout
+        <RelativeLayout
             android:id="@+id/header_home"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -30,7 +30,7 @@
                 android:textAlignment="gravity"
                 android:textSize="35sp"/>
 
-        </LinearLayout>
+        </RelativeLayout>
 
         <!-- Menu Buttons -->
         <ScrollView
@@ -57,7 +57,7 @@
                         android:layout_weight="5"
                         android:scaleType="fitXY"
                         android:adjustViewBounds="true"
-                        android:src="@drawable/ic_test"
+                        android:src="@drawable/ic_introduction"
                         android:contentDescription="@string/disease_intro"/>
 
 
@@ -87,7 +87,7 @@
                         android:layout_weight="5"
                         android:scaleType="fitXY"
                         android:adjustViewBounds="true"
-                        android:src="@drawable/ic_test"
+                        android:src="@drawable/ic_first_aid"
                         android:contentDescription="@string/disease_intro"/>
 
 
@@ -117,7 +117,7 @@
                         android:layout_weight="5"
                         android:scaleType="fitXY"
                         android:adjustViewBounds="true"
-                        android:src="@drawable/ic_test"
+                        android:src="@drawable/ic_measurement"
                         android:contentDescription="@string/disease_intro"/>
 
 
@@ -147,7 +147,7 @@
                         android:layout_weight="5"
                         android:scaleType="fitXY"
                         android:adjustViewBounds="true"
-                        android:src="@drawable/ic_test"
+                        android:src="@drawable/ic_health_record"
                         android:contentDescription="@string/disease_intro"/>
 
 
@@ -177,7 +177,7 @@
                         android:layout_weight="5"
                         android:scaleType="fitXY"
                         android:adjustViewBounds="true"
-                        android:src="@drawable/ic_test"
+                        android:src="@drawable/ic_make_appiontments"
                         android:contentDescription="@string/disease_intro"/>
 
 
@@ -207,7 +207,7 @@
                         android:layout_weight="5"
                         android:scaleType="fitXY"
                         android:adjustViewBounds="true"
-                        android:src="@drawable/ic_test"
+                        android:src="@drawable/ic_service"
                         android:contentDescription="@string/disease_intro"/>
 
 
