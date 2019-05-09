@@ -26,4 +26,31 @@
     <string name="diabetes">Diabetes</string>
     <string name="back_arrow">Back Arrow</string>
 
+    <!-- Intro: Asthma -->
+    <string name="introduction_asthma">Introduction: Asthma</string>
+    <string name="what_is_asthma_title">What is Asthma?</string>
+    <string name="what_is_asthma">Asthma is a condition in which your airways narrow and swell and produce extra mucus. This can make breathing difficult and trigger coughing, wheezing and shortness of breath.&#xA;
+        &#xA;For some people, asthma is a minor nuisance. For others, it can be a major problem that interferes with daily activities and may lead to a life-threatening asthma attack.&#xA;
+        &#xA;Asthma can\'t be cured, but its symptoms can be controlled. Because asthma often changes over time, it\'s important that you work with your doctor to track your signs and symptoms and adjust treatment as needed.
+    </string>
+    <string name="symptoms_title">Symptoms</string>
+    <string name="symptoms_asthma"><b>Asthma signs and symptoms include:</b>&#xA;
+    &#xA;&#009;&#009;&#8226;Shortness of breath
+	&#xA;&#009;&#009;&#8226;Chest tightness or pain
+	&#xA;&#009;&#009;&#8226;Trouble sleeping caused by shortness of breath, coughing or wheezing
+	&#xA;&#009;&#009;&#8226;A whistling or wheezing sound when exhaling (wheezing is a common sign of asthma in children)
+	&#xA;&#009;&#009;&#8226;Coughing or wheezing attacks that are worsened by a respiratory virus, such as a cold or the flu&#xA;
+    &#xA;<b>Signs that your asthma is probably worsening include:</b>&#xA;
+	&#xA;&#009;&#009;&#8226;Asthma signs and symptoms that are more frequent and bothersome
+	&#xA;&#009;&#009;&#8226;Increasing difficulty breathing (measurable with a peak flow meter, a device used to check how well your lungs are working)
+	&#xA;&#009;&#009;&#8226;The need to use a quick-relief inhaler more often&#xA;
+    &#xA;<b>For some people, asthma signs and symptoms flare up in certain situations:</b>&#xA;
+    &#xA;&#009;&#009;&#8226;Exercise-induced asthma, which may be worse when the air is cold and dry
+	&#xA;&#009;&#009;&#8226;Occupational asthma, triggered by workplace irritants such as chemical fumes, gases or dust
+	&#xA;&#009;&#009;&#8226;Allergy-induced asthma, triggered by airborne substances, such as pollen, mold spores, cockroach waste or particles of skin and dried saliva shed by pets (pet dander)
+    </string>
+    
+    <!-- Intro: Diabetes -->
+
+
 </resources>
