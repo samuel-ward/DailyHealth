@@ -13,10 +13,11 @@
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".DiseaseIntro"></activity>
+        <activity android:name=".IntroductionAsthma"></activity>
+        <activity android:name=".DiseaseIntro" />
         <activity
             android:name=".ui.login.LoginActivity"
-            android:label="@string/title_activity_login"></activity>
+            android:label="@string/title_activity_login" />
         <activity android:name=".HomePageActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
