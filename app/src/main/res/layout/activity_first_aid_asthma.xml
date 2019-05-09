@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/intro_asthma_page"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FirstAidAsthma">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header -->
+        <RelativeLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/lbl_home"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingTop="100dp"
+                android:text="@string/first_aid_rescue_info"
+                android:textAlignment="gravity"
+                android:textSize="35sp" />
+
+            <ImageView
+                android:id="@+id/icon_back_arrow"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="76dp"
+                android:contentDescription="@string/back_arrow"
+                app:srcCompat="@drawable/ic_arrow_back_black_24dp"
+                android:tint="@color/design_default_color_primary_dark" />
+
+            <ImageView
+                android:id="@+id/icon_disease_intro"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignParentEnd="true"
+                android:contentDescription="@string/asthma"
+                app:srcCompat="@drawable/ic_asthma"
+                android:tint="@color/design_default_color_primary"/>
+
+        </RelativeLayout>
+
+        <!-- Text -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="15dp"
+            android:scrollbars="vertical"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/lbl_intro_asthma_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/how_to_prevent_title"
+                    android:textAlignment="gravity"
+                    android:textSize="40sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/lbl_intro_asthma_p1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:text="@string/first_aid_asthma"
+                    android:textAlignment="gravity"
+                    android:textSize="20sp"/>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <!--<RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/icon_forward_arrow"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentEnd="true"
+                android:contentDescription="@string/back_arrow"
+                app:srcCompat="@drawable/ic_arrow_forward_black_24dp"
+                android:tint="@color/design_default_color_primary_dark" />
+
+        </RelativeLayout> -->
+
+    </LinearLayout>
+
+</android.support.v7.widget.LinearLayoutCompat>
