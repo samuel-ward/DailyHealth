@@ -13,7 +13,8 @@
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".IntroductionDiabetes"></activity>
+        <activity android:name=".FirstAid"></activity>
+        <activity android:name=".IntroductionDiabetes" />
         <activity android:name=".IntroductionAsthma" />
         <activity android:name=".DiseaseIntro" />
         <activity
