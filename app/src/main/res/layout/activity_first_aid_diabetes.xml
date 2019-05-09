@@ -6,7 +6,7 @@
     android:id="@+id/intro_asthma_page"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FirstAidAsthma">
+    tools:context=".FirstAidDiabetes">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -44,8 +44,8 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_alignParentEnd="true"
-                android:contentDescription="@string/asthma"
-                app:srcCompat="@drawable/ic_asthma"
+                android:contentDescription="@string/diabetes"
+                app:srcCompat="@drawable/ic_diabetes"
                 android:tint="@color/design_default_color_primary"/>
 
         </RelativeLayout>
@@ -64,7 +64,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/lbl_first_aid_asthma_title"
+                    android:id="@+id/lbl_first_aid_diabetes_title"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/how_to_prevent_title"
@@ -73,11 +73,11 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/lbl_first_aid_asthma_p1"
+                    android:id="@+id/lbl_first_aid_diabetes_p1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingTop="10dp"
-                    android:text="@string/first_aid_asthma"
+                    android:text="@string/first_aid_diabetes"
                     android:textAlignment="gravity"
                     android:textSize="20sp"/>
 
