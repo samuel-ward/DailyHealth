@@ -10,6 +10,8 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
+    <string name="action_register">Register</string>
+    <string name="action_skip">Skip</string>
 
     <!-- Home Page -->
     <string name="home_page">Home Page</string>
@@ -204,5 +206,7 @@
         &#xA;&#009;&#009;&#8226;You are using your reliever every 1‐2 hours&#xA;
         &#xA;Any alterations in medication should be made in consultation with your personal physician
     </string>
+
+    <!-- Record -->
 
 </resources>
