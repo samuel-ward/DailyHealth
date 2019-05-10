@@ -100,6 +100,38 @@
     </string>
 
     <!-- Measurement -->
+    <string name="measurement_page_title">Want Our Advice?</string>
+    <string name="measurement_page_subtitle">We would like to ask a few questions about your asthma condition to help make a preliminary assessment of your condition.
+        &#xA;None of your information will be saved throughout this process, to protect your privacy</string>
+    <string name="measurement_page_button1">Let\'s Do It</string>
+    <string name="measurement_page_button2">Do It Later</string>
+    <string name="next_stage">GO ON</string>
+    <string name="stage1_7">1 of 7</string>
+    <string name="measure_peak_flow_q">What is your measured peak flow?</string>
+    <string name="stage2_7">2 of 7</string>
+    <string name="predicted_peak_flow_q">What is your predicted peak flow?</string>
+    <string name="stage3_7">3 of 7</string>
+    <string name="sentence_formation_q">How well can you form sentences?</string>
+    <string name="sentence_formation_opt1">Full Sentences</string>
+    <string name="sentence_formation_opt2">Short Sentences</string>
+    <string name="sentence_formation_opt3">Words Only</string>
+    <string name="sentence_formation_opt4">Can\'t Speak</string>
+    <string name="stage4_7">4 of 7</string>
+    <string name="respiratory_rate_q">What is your current respiration rate?</string>
+    <string name="stage5_7">5 of 7</string>
+    <string name="respiratory_effort_q">How easy is it to breathe?</string>
+    <string name="respiratory_effort_opt1">Easy</string>
+    <string name="respiratory_effort_opt2">Normal</string>
+    <string name="respiratory_effort_opt3">Hard</string>
+    <string name="respiratory_effort_opt4">Challenging</string>
+    <string name="stage6_7">6 of 7</string>
+    <string name="heart_rate_q">What is your heart rate?</string>
+    <string name="stage7_7">7 of 7</string>
+    <string name="exhaustion_q">What level of exhaustion are you experiencing?</string>
+    <string name="exhaustion_op1">None</string>
+    <string name="exhaustion_op2">Tired</string>
+    <string name="exhaustion_op3">Drained</string>
+    <string name="exhaustion_op4">Exhausted</string>
 
 
 </resources>
