@@ -156,6 +156,53 @@
     <string name="exhaustion_opt3_s">+++</string>
     <string name="exhaustion_opt4">Exhausted</string>
     <string name="exhaustion_opt4_s">++++</string>
-
+    <!-- Results -->
+    <string name="results">Your Results</string>
+    <string name="severity_button1">Mild</string>
+    <string name="severity_button2">Moderate</string>
+    <string name="severity_button3">Severe</string>
+    <string name="severity_button4">Threatening</string>
+    <string name="severity_mild"><b>Your symptoms appear to be mild</b>&#xA;
+        &#xA;We suggest that you use a spacer, if one can be used with your preventer inhaler.
+        &#xA;Carry your reliever at all times.&#xA;
+        &#xA;<b>Your asthma is under control when:</b>&#xA;
+        &#xA;&#009;&#009;&#8226;You don’t have asthma symptoms most days (wheeze, tight chest, a cough or feeling breathless)
+        &#xA;&#009;&#009;&#8226;You have no cough or wheeze at night
+        &#xA;&#009;&#009;&#8226;You can do all your usual activities and exercise freely
+        &#xA;&#009;&#009;&#8226;Most days you don’t need a reliever&#xA;
+        &#xA;Any alterations in medication should be made in consultation with your personal physician
+    </string>
+    <string name="severity_moderate"><b>Your symptoms appear to be moderate</b>&#xA;
+        &#xA;We suggest stepping up your preventer medicine.
+        &#xA;Use your reliever as often as needed – through a spacer, if one can be used with your reliever inhaler.&#xA;
+        &#xA;<b>Caution! Your asthma is getting worse when:</b>&#xA;
+        &#xA;&#009;&#009;&#8226;You have symptoms most days (wheeze, tight chest, a cough or feeling breathless)
+        &#xA;&#009;&#009;&#8226;You are waking at night with symptoms
+        &#xA;&#009;&#009;&#8226;You are getting a cold
+        &#xA;&#009;&#009;&#8226;You feel short of breath when you exercise&#xA;
+        &#xA;Any alterations in medication should be made in consultation with your personal physician
+    </string>
+    <string name="severity_severe"><b>Your symptoms appear to be severe</b>&#xA;
+        &#xA;Continue your medicine for “getting worse”
+        &#xA;Start prednisone if you have it
+        &#xA;<b>Important: You need to see your doctor today</b>&#xA;
+        &#xA;<b>Caution! Your asthma is getting severe when:</b>&#xA;
+        &#xA;&#009;&#009;&#8226;Your symptoms are getting severe (wheeze, tight chest, a cough or feeling breathless)
+        &#xA;&#009;&#009;&#8226;Your reliever is only helping for 2‐3 hours, or you are using more than 12 puffs a day
+        &#xA;&#009;&#009;&#8226;You feel you need to see your doctor&#xA;
+        &#xA;Any alterations in medication should be made in consultation with your personal physician
+    </string>
+    <string name="severity_emergency"><b>Let’s keep calm…</b>&#xA;
+        &#xA;&#009;&#009;&#8226;Dial 111 for ambulance
+        &#xA;&#009;&#009;&#8226;Keep using your reliever as often as needed – through a spacer, if one can be used with your reliever inhaler
+        &#xA;&#009;&#009;&#8226;Even if you seem to get better seek medical help right away
+        &#xA;&#009;&#009;&#8226;If you haven’t started taking your prednisone, start now&#xA;
+        &#xA;<b>Emergency:</b>&#xA;
+        &#xA;&#009;&#009;&#8226;Your symptoms are getting more severe quickly
+        &#xA;&#009;&#009;&#8226;You are finding it hard to speak or breathe
+        &#xA;&#009;&#009;&#8226;Your reliever is not helping much
+        &#xA;&#009;&#009;&#8226;You are using your reliever every 1‐2 hours&#xA;
+        &#xA;Any alterations in medication should be made in consultation with your personal physician
+    </string>
 
 </resources>
