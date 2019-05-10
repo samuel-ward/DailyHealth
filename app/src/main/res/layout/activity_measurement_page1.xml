@@ -47,12 +47,22 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"></NumberPicker>
 
+        <ImageView
+            android:id="@+id/icon_back_arrow"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentBottom="true"
+            android:contentDescription="@string/back_arrow"
+            app:srcCompat="@drawable/ic_arrow_back_black_24dp"
+            android:tint="@color/design_default_color_primary_dark" />
+
         <Button
             android:id="@+id/btn_measurement_go_on"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
             android:text="@string/next_stage_button"  />
 
     </RelativeLayout>
