@@ -113,6 +113,7 @@
     <!-- Stage 2 -->
     <string name="stage2_7">2 of 7</string>
     <string name="predicted_peak_flow_q">What is your predicted peak flow?</string>
+    <string name="predicted_peak_flow_s">If you do not know or have a predicted peak flow, put \'0\' and we will calculate a general one for you</string>
     <!-- Stage 3 -->
     <string name="stage3_7">3 of 7</string>
     <string name="sentence_formation_q">How well can you form sentences?</string>
