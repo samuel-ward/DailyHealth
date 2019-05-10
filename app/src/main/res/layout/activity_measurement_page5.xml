@@ -15,7 +15,7 @@
         android:paddingTop="20dp"
         android:textSize="15sp"
         android:textAlignment="center"
-        android:text="@string/stage3_7"/>
+        android:text="@string/stage5_7"/>
 
     <TextView
         android:id="@+id/lbl_measurement5_question"

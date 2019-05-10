@@ -144,6 +144,7 @@
     <!-- Stage 6 -->
     <string name="stage6_7">6 of 7</string>
     <string name="heart_rate_q">What is your heart rate?</string>
+    <string name="heart_rate_s">Find your pulse, then count how many beats there are in 15 seconds and multiply that by 4</string>
     <!-- Stage 7 -->
     <string name="stage7_7">7 of 7</string>
     <string name="exhaustion_q">What level of exhaustion are you experiencing?</string>
