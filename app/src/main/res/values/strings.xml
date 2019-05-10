@@ -208,5 +208,10 @@
     </string>
 
     <!-- Record -->
+    <string name="record_title">Your Medical Record</string>
+    <string name="record_add">Add Record</string>
+    <string name="record_name">Record Title:</string>
+    <string name="record_details">Details:</string>
+    <string name="record_save">Save Record</string>
 
 </resources>
