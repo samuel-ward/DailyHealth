@@ -117,10 +117,15 @@
     <!-- Stage 3 -->
     <string name="stage3_7">3 of 7</string>
     <string name="sentence_formation_q">How well can you form sentences?</string>
+    <string name="option">Option</string>
     <string name="sentence_formation_opt1">Full Sentences</string>
+    <string name="sentence_formation_opt1_s">I can speak fluently</string>
     <string name="sentence_formation_opt2">Short Sentences</string>
+    <string name="sentence_formation_opt2_s">I can only get out short sentences</string>
     <string name="sentence_formation_opt3">Words Only</string>
+    <string name="sentence_formation_opt3_s">I can only get out single words</string>
     <string name="sentence_formation_opt4">Can\'t Speak</string>
+    <string name="sentence_formation_opt4_s">I find it very difficult to speak at all</string>
     <!-- Stage 4 -->
     <string name="stage4_7">4 of 7</string>
     <string name="respiratory_rate_q">What is your current respiration rate?</string>
