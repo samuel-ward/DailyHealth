@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="400px"
+    android:scaleType="fitCenter"
+    android:adjustViewBounds="true"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/lbl_date"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:text="@string/health_record"
+        android:textAlignment="gravity"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/lbl_title"
+        android:layout_width="0dp"
+        android:layout_weight="3"
+        android:layout_height="match_parent"
+        android:text="@string/health_record"
+        android:textAlignment="gravity"
+        android:textSize="30sp" />
+
+</LinearLayout>
