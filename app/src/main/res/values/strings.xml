@@ -148,10 +148,14 @@
     <!-- Stage 7 -->
     <string name="stage7_7">7 of 7</string>
     <string name="exhaustion_q">What level of exhaustion are you experiencing?</string>
-    <string name="exhaustion_op1">None</string>
-    <string name="exhaustion_op2">Tired</string>
-    <string name="exhaustion_op3">Drained</string>
-    <string name="exhaustion_op4">Exhausted</string>
+    <string name="exhaustion_opt1">None</string>
+    <string name="exhaustion_opt1_s">+</string>
+    <string name="exhaustion_opt2">Tired Sometimes</string>
+    <string name="exhaustion_opt2_s">++</string>
+    <string name="exhaustion_opt3">Tired Often</string>
+    <string name="exhaustion_opt3_s">+++</string>
+    <string name="exhaustion_opt4">Exhausted</string>
+    <string name="exhaustion_opt4_s">++++</string>
 
 
 </resources>

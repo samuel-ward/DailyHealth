@@ -13,7 +13,9 @@
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MeasurementPage6"></activity>
+        <activity android:name=".MeasurementResult"></activity>
+        <activity android:name=".MeasurementPage7" />
+        <activity android:name=".MeasurementPage6" />
         <activity android:name=".MeasurementPage5" />
         <activity android:name=".MeasurementPage4" />
         <activity android:name=".MeasurementPage3" />
