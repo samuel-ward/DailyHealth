@@ -209,9 +209,12 @@
 
     <!-- Record -->
     <string name="record_title">Your Medical Record</string>
-    <string name="record_add">Add Record</string>
+    <string name="record_add">Add New Health Record</string>
+    <string name="record_new">New Health Record</string>
+    <string name="record_name_add">Add Record Title</string>
     <string name="record_name">Record Title:</string>
+    <string name="record_details_add">Add Details</string>
     <string name="record_details">Details:</string>
-    <string name="record_save">Save Record</string>
+    <string name="record_save">Save Health Record</string>
 
 </resources>

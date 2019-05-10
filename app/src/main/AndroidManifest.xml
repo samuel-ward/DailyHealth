@@ -13,7 +13,8 @@
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".RecordIntro"></activity>
+        <activity android:name=".RecordNew"></activity>
+        <activity android:name=".RecordIntro" />
         <activity android:name=".MeasurementResult" />
         <activity android:name=".MeasurementPage7" />
         <activity android:name=".MeasurementPage6" />
