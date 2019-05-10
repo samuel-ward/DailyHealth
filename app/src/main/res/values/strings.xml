@@ -129,6 +129,7 @@
     <!-- Stage 4 -->
     <string name="stage4_7">4 of 7</string>
     <string name="respiratory_rate_q">What is your current respiration rate?</string>
+    <string name="respiratory_rate_s">Count how many times your chest raises in a minute, while you\'re breathing normally</string>
     <!-- Stage 5 -->
     <string name="stage5_7">5 of 7</string>
     <string name="respiratory_effort_q">How easy is it to breathe?</string>
