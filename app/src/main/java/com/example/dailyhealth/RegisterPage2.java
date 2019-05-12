@@ -34,6 +34,7 @@ public class RegisterPage2 extends AppCompatActivity {
             public void onClick(View v) {
                 try{
                     Intent i = new Intent(RegisterPage2.this, RegisterPage3.class);
+                    startActivity(i);
                 }catch(Exception e){
 
                 }

@@ -38,6 +38,7 @@ public class RegisterIntro extends AppCompatActivity {
             public void onClick(View v) {
                 try{
                     Intent i = new Intent(RegisterIntro.this, RegisterPage1.class);
+                    startActivity(i);
                 }catch(Exception e){
 
                 }
