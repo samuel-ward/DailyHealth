@@ -26,6 +26,7 @@ import android.widget.Toast;
 
 import com.example.dailyhealth.HomePageActivity;
 import com.example.dailyhealth.R;
+import com.example.dailyhealth.RegisterIntro;
 import com.example.dailyhealth.ui.login.LoginViewModel;
 import com.example.dailyhealth.ui.login.LoginViewModelFactory;
 
@@ -62,6 +63,16 @@ public class LoginActivity extends AppCompatActivity {
 
         //Register Button
         registerButton.setEnabled(true);
+        registerButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try{
+                    Intent i = new Intent(LoginActivity.this, RegisterIntro.class);
+                    startActivity(i);
+                } catch(Exception e){
+                }
+            }
+        });
 
         //Login Button
         loginViewModel.getLoginFormState().observe(this, new Observer<LoginFormState>() {

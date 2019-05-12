@@ -13,6 +13,13 @@
     <string name="action_register">Register</string>
     <string name="action_skip">Skip</string>
 
+    <!-- Register -->
+    <string name="register_title">Sign Up</string>
+    <string name="register_username">Username</string>
+    <string name="register_email">Email</string>
+    <string name="register_password">Password</string>
+    <string name="register_tandc">By signing up you agree to our terms and conditions, as well as our privacy policy</string>
+
     <!-- Home Page -->
     <string name="home_page">Home Page</string>
     <string name="disease_intro">Disease Introduction</string>
