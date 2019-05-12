@@ -68,6 +68,7 @@
                 android:layout_weight="1"
                 android:padding="10dp"
                 android:layout_height="match_parent"
+                android:backgroundTint="@color/colorMild"
                 android:text="@string/severity_button1" />
 
             <Button
@@ -76,6 +77,7 @@
                 android:layout_weight="1"
                 android:padding="10dp"
                 android:layout_height="match_parent"
+                android:backgroundTint="@color/colorModerate"
                 android:text="@string/severity_button2"/>
 
             <Button
@@ -84,6 +86,7 @@
                 android:layout_weight="1"
                 android:padding="10dp"
                 android:layout_height="match_parent"
+                android:backgroundTint="@color/colorSevere"
                 android:text="@string/severity_button3"/>
 
             <!--<Button
@@ -93,6 +96,7 @@
                 android:padding="10dp"
                 android:layout_height="match_parent"
                 style="?android:attr/buttonBarButtonStyle"
+                android:backgroundTin="@color/colorEmergency"
                 android:text="@string/severity_button4"/>-->
 
         </LinearLayout>

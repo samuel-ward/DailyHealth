@@ -15,5 +15,9 @@
     <color name="colorDGray">#2f4f4f</color>
     <color name="colorGray">#708090</color>
     <color name="colorLGray">#778899</color>
+    <color name="colorMild">#b4ff4a</color>
+    <color name="colorModerate">#ffcc66</color>
+    <color name="colorSevere">#ff8052</color>
+    <color name="colorEmergency">#ff342d</color>
 
 </resources>

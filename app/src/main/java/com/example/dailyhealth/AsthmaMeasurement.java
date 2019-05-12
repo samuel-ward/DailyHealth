@@ -17,11 +17,6 @@ public class AsthmaMeasurement {
     private int height;
     private boolean sex;
     //Calculations
-    private int calculateFlowPercentage(){
-        float temp;
-        temp = (float)measuredPeakFlow/(float)predictedPeakFlow;
-        return (int)temp*100;
-    }
 
     //Public
     //Constructor
@@ -44,29 +39,43 @@ public class AsthmaMeasurement {
     void setHeartRate(int reading){heartRate=reading;}
     void setExhaustion(int reading){exhaustion=reading;}
 
+    //Get
+    int getMeasuredPeakFlow(){return measuredPeakFlow;}
+    int getPredictedPeakFlow(){return predictedPeakFlow;}
+    int getSentenceFormation(){return sentenceFormation;}
+    int getRespiratoryRate(){return respiratoryRate;}
+    int getRespiratoryEffort(){return respiratoryEffort;}
+    int getHeartRate(){return heartRate;}
+    int getExhaustion(){return exhaustion;}
+
     //Calculation
+    int calculateFlowPercentage(double a, double b){
+        return (int)(a/b*100);
+    }
+
+    void calculatePredictedPeakFlow(boolean gender, int age, int height){
+
+        if(gender){
+            //Male
+            predictedPeakFlow = (int)Math.exp((0.544*Math.log(age))-(.0151*age)-(74.7/height)+5.48);
+        } else {
+            //Female
+            predictedPeakFlow = (int)Math.exp((0.376*Math.log(age))-(.012*age)-(58.8/height)+5.63);
+        }
+
+    }
+
     int calculateSeverity(){
         int severityTotal = 0;
         boolean[] emergency = new boolean[6];
         for(int i = 0; i < emergency.length; i++){emergency[i]=false;}
 
-        //Predicted Peak Flow
-        if(predictedPeakFlow == 0){
-            if(sex){
-                //Male
-                predictedPeakFlow = (int)Math.exp((0.544*Math.log(age))-(.0151*age)-(74.7/height)+5.48);
-            } else {
-                //Female
-                predictedPeakFlow = (int)Math.exp((0.376*Math.log(age))-(.012*age)-(58.8/height)+5.63);
-            }
-        }
-
         //Flow% -- [0]
-        if(calculateFlowPercentage() > 70){
+        if(calculateFlowPercentage(measuredPeakFlow,predictedPeakFlow) > 70){
             severityTotal+=0;
-        } else if(calculateFlowPercentage() > 50 && calculateFlowPercentage() <= 70){
+        } else if(calculateFlowPercentage(measuredPeakFlow,predictedPeakFlow) > 50 && calculateFlowPercentage(measuredPeakFlow,predictedPeakFlow) <= 70){
             severityTotal+=1;
-        } else if(calculateFlowPercentage() > 33 && calculateFlowPercentage() <= 50){
+        } else if(calculateFlowPercentage(measuredPeakFlow,predictedPeakFlow) > 33 && calculateFlowPercentage(measuredPeakFlow,predictedPeakFlow) <= 50){
             severityTotal+=2;
         } else {
             severityTotal+=3;
@@ -137,10 +146,10 @@ public class AsthmaMeasurement {
         if(severityTotal <= 2){
             //Severity = Mild
             severity = 0;
-        } else if (severityTotal <= 4 && severityTotal > 2){
+        } else if (severityTotal <= 6 && severityTotal > 2){
             //Severity = Moderate
             severity = 1;
-        } else if (severityTotal <= 8 && severityTotal > 4){
+        } else if (severityTotal <= 14 && severityTotal > 6){
             //Severity = Severe
             severity = 2;
         } else {
@@ -156,6 +165,5 @@ public class AsthmaMeasurement {
 
         return severity;
     }
-
 
 }
