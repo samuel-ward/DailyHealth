@@ -1,6 +1,7 @@
 package com.example.dailyhealth;
 
 import android.content.Intent;
+import android.content.res.ColorStateList;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -30,40 +31,40 @@ public class MeasurementPage3 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 sentenceFormation = 0;
-                option1.setColorFilter(R.color.colorDBlue);
-                option2.setColorFilter(R.color.colorLBlue);
-                option3.setColorFilter(R.color.colorLBlue);
-                option4.setColorFilter(R.color.colorLBlue);
+                option1.setImageTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorDBlue)));
+                option2.setImageTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorLBlue)));
+                option3.setImageTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorLBlue)));
+                option4.setImageTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorLBlue)));
             }
         });
         option2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 sentenceFormation = 1;
-                option1.setColorFilter(R.color.colorLBlue);
-                option2.setColorFilter(R.color.colorDBlue);
-                option3.setColorFilter(R.color.colorLBlue);
-                option4.setColorFilter(R.color.colorLBlue);
+                option1.setImageTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorLBlue)));
+                option2.setImageTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorDBlue)));
+                option3.setImageTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorLBlue)));
+                option4.setImageTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorLBlue)));
             }
         });
         option3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 sentenceFormation = 2;
-                option1.setColorFilter(R.color.colorLBlue);
-                option2.setColorFilter(R.color.colorLBlue);
-                option3.setColorFilter(R.color.colorDBlue);
-                option4.setColorFilter(R.color.colorLBlue);
+                option1.setImageTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorLBlue)));
+                option2.setImageTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorLBlue)));
+                option3.setImageTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorDBlue)));
+                option4.setImageTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorLBlue)));
             }
         });
         option4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 sentenceFormation = 3;
-                option1.setColorFilter(R.color.colorLBlue);
-                option2.setColorFilter(R.color.colorLBlue);
-                option3.setColorFilter(R.color.colorLBlue);
-                option4.setColorFilter(R.color.colorDBlue);
+                option1.setImageTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorLBlue)));
+                option2.setImageTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorLBlue)));
+                option3.setImageTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorLBlue)));
+                option4.setImageTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorDBlue)));
             }
         });
 

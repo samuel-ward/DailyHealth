@@ -130,4 +130,10 @@ public class MeasurementResult extends AppCompatActivity {
             Toast.makeText(MeasurementResult.this, "Something went wrong, please take your measurement again", Toast.LENGTH_LONG).show();
         }
     }
+
+    @Override
+    public void onBackPressed() {
+        Intent i = new Intent(MeasurementResult.this, HomePageActivity.class);
+        startActivity(i);
+    }
 }

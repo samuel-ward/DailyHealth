@@ -34,7 +34,7 @@
             android:layout_marginTop="76dp"
             android:contentDescription="@string/back_arrow"
             app:srcCompat="@drawable/ic_arrow_back_black_24dp"
-            android:tint="@color/colorBlue" />
+            android:tint="@color/colorWBlue" />
 
         <ImageView
             android:id="@+id/icon_disease_intro"

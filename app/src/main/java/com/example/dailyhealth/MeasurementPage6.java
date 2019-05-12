@@ -23,10 +23,10 @@ public class MeasurementPage6 extends AppCompatActivity {
 
         //Number Picker
         int PICKER_RANGE = 1;
-        int NUMBER_OF_VALUES = 50;
+        int NUMBER_OF_VALUES = 90;
         final String [] displayValues = new String[NUMBER_OF_VALUES];
         for(int i = 0; i < NUMBER_OF_VALUES; i++){
-            displayValues[i] = String.valueOf(PICKER_RANGE * (i+1));
+            displayValues[i] = String.valueOf(PICKER_RANGE * (i+45));
         }
         heartRatePicker.setMinValue(0);
         heartRatePicker.setMaxValue(displayValues.length -1);

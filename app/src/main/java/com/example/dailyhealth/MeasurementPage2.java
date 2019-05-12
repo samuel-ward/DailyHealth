@@ -22,11 +22,11 @@ public class MeasurementPage2 extends AppCompatActivity {
         final NumberPicker predictedFlowPicker = findViewById(R.id.np_measurement2);
 
         //Number Picker
-        int PICKER_RANGE = 10;
-        int NUMBER_OF_VALUES = 70;
+        int PICKER_RANGE = 100;
+        int NUMBER_OF_VALUES = 700;
         final String [] displayValues = new String[NUMBER_OF_VALUES];
         for(int i = 0; i < NUMBER_OF_VALUES; i++){
-            displayValues[i] = String.valueOf(PICKER_RANGE * (i+1) * 100);
+            displayValues[i] = String.valueOf(PICKER_RANGE * (i+1));
         }
         predictedFlowPicker.setMinValue(0);
         predictedFlowPicker.setMaxValue(displayValues.length -1);
