@@ -58,80 +58,80 @@
     <!-- Intro: Asthma -->
     <string name="introduction_asthma">Introduction: Asthma</string>
     <string name="what_is_asthma_title">What is Asthma?</string>
-    <string name="what_is_asthma">Asthma is a condition in which your airways narrow and swell and produce extra mucus. This can make breathing difficult and trigger coughing, wheezing and shortness of breath.&#xA;
-        &#xA;For some people, asthma is a minor nuisance. For others, it can be a major problem that interferes with daily activities and may lead to a life-threatening asthma attack.&#xA;
-        &#xA;Asthma can\'t be cured, but its symptoms can be controlled. Because asthma often changes over time, it\'s important that you work with your doctor to track your signs and symptoms and adjust treatment as needed.
+    <string name="what_is_asthma">Asthma is a condition in which your airways narrow and swell and produce extra mucus. This can make breathing difficult and trigger coughing, wheezing and shortness of breath.\n
+        \nFor some people, asthma is a minor nuisance. For others, it can be a major problem that interferes with daily activities and may lead to a life-threatening asthma attack.\n
+        \nAsthma can\'t be cured, but its symptoms can be controlled. Because asthma often changes over time, it\'s important that you work with your doctor to track your signs and symptoms and adjust treatment as needed.
     </string>
     <string name="symptoms_title">Symptoms</string>
-    <string name="symptoms_asthma"><b>Asthma signs and symptoms include:</b>&#xA;
-        &#xA;&#009;&#009;&#8226;Shortness of breath
-        &#xA;&#009;&#009;&#8226;Chest tightness or pain
-        &#xA;&#009;&#009;&#8226;Trouble sleeping caused by shortness of breath, coughing or wheezing
-        &#xA;&#009;&#009;&#8226;A whistling or wheezing sound when exhaling (wheezing is a common sign of asthma in children)
-        &#xA;&#009;&#009;&#8226;Coughing or wheezing attacks that are worsened by a respiratory virus, such as a cold or the flu&#xA;
-        &#xA;<b>Signs that your asthma is probably worsening include:</b>&#xA;
-        &#xA;&#009;&#009;&#8226;Asthma signs and symptoms that are more frequent and bothersome
-        &#xA;&#009;&#009;&#8226;Increasing difficulty breathing (measurable with a peak flow meter, a device used to check how well your lungs are working)
-        &#xA;&#009;&#009;&#8226;The need to use a quick-relief inhaler more often&#xA;
-        &#xA;<b>For some people, asthma signs and symptoms flare up in certain situations:</b>&#xA;
-        &#xA;&#009;&#009;&#8226;Exercise-induced asthma, which may be worse when the air is cold and dry
-        &#xA;&#009;&#009;&#8226;Occupational asthma, triggered by workplace irritants such as chemical fumes, gases or dust
-	    &#xA;&#009;&#009;&#8226;Allergy-induced asthma, triggered by airborne substances, such as pollen, mold spores, cockroach waste or particles of skin and dried saliva shed by pets (pet dander)
+    <string name="symptoms_asthma"><b>Asthma signs and symptoms include:</b>\n
+        \n\t-Shortness of breath
+        \n\t-Chest tightness or pain
+        \n\t-Trouble sleeping caused by shortness of breath, coughing or wheezing
+        \n\t-A whistling or wheezing sound when exhaling (wheezing is a common sign of asthma in children)
+        \n\t-Coughing or wheezing attacks that are worsened by a respiratory virus, such as a cold or the flu&#xA;
+        \n<b>Signs that your asthma is probably worsening include:</b>\n
+        \n\t-Asthma signs and symptoms that are more frequent and bothersome
+        \n\t-Increasing difficulty breathing (measurable with a peak flow meter, a device used to check how well your lungs are working)
+        \n\t-The need to use a quick-relief inhaler more often\n
+        \n<b>For some people, asthma signs and symptoms flare up in certain situations:</b>\n
+        \n\t-Exercise-induced asthma, which may be worse when the air is cold and dry
+        \n\t-Occupational asthma, triggered by workplace irritants such as chemical fumes, gases or dust
+	    \n\t-Allergy-induced asthma, triggered by airborne substances, such as pollen, mold spores, cockroach waste or particles of skin and dried saliva shed by pets (pet dander)
     </string>
 
     <!-- Intro: Diabetes -->
     <string name="introduction_diabetes">Introduction: Diabetes</string>
     <string name="what_is_diabetes_title">What is Diabetes?</string>
-    <string name="what_is_diabetes">Type I diabetes: Also known as juvenile diabetes, this type occurs when the body fails to produce insulin. People with type I diabetes are insulin-dependent, which means they must take artificial insulin daily to stay alive.&#xA;
-        &#xA;Type 2 diabetes: Type 2 diabetes affects the way the body uses insulin. While the body still makes insulin, unlike in type I, the cells in the body do not respond to it as effectively as they once did. This is the most common type of diabetes, according to the National Institute of Diabetes and Digestive and Kidney Diseases, and it has strong links with obesity.&#xA;
-        &#xA;Gestational diabetes: This type occurs in women during pregnancy when the body can become less sensitive to insulin. Gestational diabetes does not occur in all women and usually resolves after giving birth.
+    <string name="what_is_diabetes">Type I diabetes: Also known as juvenile diabetes, this type occurs when the body fails to produce insulin. People with type I diabetes are insulin-dependent, which means they must take artificial insulin daily to stay alive.\n
+        \nType 2 diabetes: Type 2 diabetes affects the way the body uses insulin. While the body still makes insulin, unlike in type I, the cells in the body do not respond to it as effectively as they once did. This is the most common type of diabetes, according to the National Institute of Diabetes and Digestive and Kidney Diseases, and it has strong links with obesity.\n
+        \nGestational diabetes: This type occurs in women during pregnancy when the body can become less sensitive to insulin. Gestational diabetes does not occur in all women and usually resolves after giving birth.
     </string>
-    <string name="symptoms_diabetes"><b>There are diabetes warning signs and symptoms that both women and men have in common, for example:</b>&#xA;
-        &#xA;&#009;&#009;&#8226;Excessive thirst and hunger
-        &#xA;&#009;&#009;&#8226;Frequent urination (from urinary tract infections or kidney problems)
-        &#xA;&#009;&#009;&#8226;Weight loss or gain
-        &#xA;&#009;&#009;&#8226;Fatigue
-        &#xA;&#009;&#009;&#8226;Irritability
-        &#xA;&#009;&#009;&#8226;Blurred vision
-        &#xA;&#009;&#009;&#8226;Slow-healing wounds
-        &#xA;&#009;&#009;&#8226;Nausea
-        &#xA;&#009;&#009;&#8226;Skin infections
-        &#xA;&#009;&#009;&#8226;Darkening of skin in areas of body creases (acanthosis nigricans)
-        &#xA;&#009;&#009;&#8226;Breath odor that is fruity, sweet, or an acetone odor
-        &#xA;&#009;&#009;&#8226;Tingling or numbness in the hands or feet
+    <string name="symptoms_diabetes"><b>There are diabetes warning signs and symptoms that both women and men have in common, for example:</b>\n
+        \n\t-Excessive thirst and hunger
+        \n\t-Frequent urination (from urinary tract infections or kidney problems)
+        \n\t-Weight loss or gain
+        \n\t-Fatigue
+        \n\t-Irritability
+        \n\t-Blurred vision
+        \n\t-Slow-healing wounds
+        \n\t-Nausea
+        \n\t-Skin infections
+        \n\t-Darkening of skin in areas of body creases (acanthosis nigricans)
+        \n\t-Breath odor that is fruity, sweet, or an acetone odor
+        \n\t-Tingling or numbness in the hands or feet
     </string>
 
     <!-- First Aid: Asthma -->
     <string name="first_aid_rescue_info">Rescue Information</string>
     <string name="how_to_prevent_title">How to prevent?</string>
-    <string name="first_aid_asthma">While there\'s no way to prevent asthma, by working together, you and your doctor can design a step-by-step plan for living with your condition and preventing asthma attacks.&#xA;
-        &#xA;Follow your asthma action plan. With your doctor and health care team, write a detailed plan for taking medications and managing an asthma attack. Then be sure to follow your plan.&#xA;
-        &#xA;Asthma is an ongoing condition that needs regular monitoring and treatment. Taking control of your treatment can make you feel more in control of your life in general.&#xA;
-        &#xA;Get vaccinated for influenza and pneumonia. Staying current with vaccinations can prevent flu and pneumonia from triggering asthma flare-ups.&#xA;
-        &#xA;Identify and avoid asthma triggers. A number of outdoor allergens and irritants — ranging from pollen and mold to cold air and air pollution — can trigger asthma attacks. Find out what causes or worsens your asthma, and take steps to avoid those triggers.&#xA;
-        &#xA;Monitor your breathing. You may learn to recognize warning signs of an impending attack, such as slight coughing, wheezing or shortness of breath. But because your lung function may decrease before you notice any signs or symptoms, regularly measure and record your peak airflow with a home peak flow meter.&#xA;
-        &#xA;Identify and treat attacks early. If you act quickly, you\'re less likely to have a severe attack. You also won\'t need as much medication to control your symptoms.When your peak flow measurements decrease and alert you to an oncoming attack, take your medication as instructed and immediately stop any activity that may have triggered the attack. If your symptoms don\'t improve, get medical help as directed in your action plan.&#xA;
-        &#xA;Take your medication as prescribed. Just because your asthma seems to be improving, don\'t change anything without first talking to your doctor. It\'s a good idea to bring your medications with you to each doctor visit, so your doctor can double-check that you\'re using your medications correctly and taking the right dose.&#xA;
-        &#xA;Pay attention to increasing quick-relief inhaler use. If you find yourself relying on your quick-relief inhaler, such as albuterol, your asthma isn\'t under control. See your doctor about adjusting your treatment.&#xA;
+    <string name="first_aid_asthma">While there\'s no way to prevent asthma, by working together, you and your doctor can design a step-by-step plan for living with your condition and preventing asthma attacks.\n
+        \nFollow your asthma action plan. With your doctor and health care team, write a detailed plan for taking medications and managing an asthma attack. Then be sure to follow your plan.\n
+        \nAsthma is an ongoing condition that needs regular monitoring and treatment. Taking control of your treatment can make you feel more in control of your life in general.\n
+        \nGet vaccinated for influenza and pneumonia. Staying current with vaccinations can prevent flu and pneumonia from triggering asthma flare-ups.\n
+        \nIdentify and avoid asthma triggers. A number of outdoor allergens and irritants — ranging from pollen and mold to cold air and air pollution — can trigger asthma attacks. Find out what causes or worsens your asthma, and take steps to avoid those triggers.\n
+        \nMonitor your breathing. You may learn to recognize warning signs of an impending attack, such as slight coughing, wheezing or shortness of breath. But because your lung function may decrease before you notice any signs or symptoms, regularly measure and record your peak airflow with a home peak flow meter.\n
+        \nIdentify and treat attacks early. If you act quickly, you\'re less likely to have a severe attack. You also won\'t need as much medication to control your symptoms.When your peak flow measurements decrease and alert you to an oncoming attack, take your medication as instructed and immediately stop any activity that may have triggered the attack. If your symptoms don\'t improve, get medical help as directed in your action plan.\n
+        \nTake your medication as prescribed. Just because your asthma seems to be improving, don\'t change anything without first talking to your doctor. It\'s a good idea to bring your medications with you to each doctor visit, so your doctor can double-check that you\'re using your medications correctly and taking the right dose.\n
+        \nPay attention to increasing quick-relief inhaler use. If you find yourself relying on your quick-relief inhaler, such as albuterol, your asthma isn\'t under control. See your doctor about adjusting your treatment.\n
     </string>
 
     <!-- First Aid: Diabetes -->
-    <string name="first_aid_diabetes">Check your risk of diabetes. Take the Life! risk assessment test and learn more about your risk of developing type 2 diabetes. A 12+ score indicates that you are at high risk and may be eligible for the Life! program - a free Victorian lifestyle modification program that helps you reduce your risk of type 2 diabetes and cardiovascular disease, or call 13 RISK (13 7475).&#xA;
-        &#xA;Manage your weight. Excess body fat, particularly if stored around the abdomen, can increase the body\’s resistance to the hormone insulin. This can lead to type 2 diabetes.&#xA;
-        &#xA;Exercise regularly. Moderate physical activity on most days of the week helps manage weight, reduce blood glucose levels and may also improve blood pressure and cholesterol.&#xA;
-        &#xA;Eat a balanced, healthy diet. Reduce the amount of fat in your diet, especially saturated and trans fats. Eat more fruit, vegetables and high-fibre foods. Cut back on salt.&#xA;
-        &#xA;Limit takeaway and processed foods. \‘Convenience meals\’ are usually high in salt, fat and kilojoules. It\’s best to cook for yourself using fresh ingredients whenever possible.&#xA;
-        &#xA;Limit your alcohol intake. Too much alcohol can lead to weight gain and may increase your blood pressure and triglyceride levels. Men should have no more than two standard drinks a day and women should have no more than one.&#xA;
-        &#xA;Quit smoking. Smokers are twice as likely to develop diabetes as non-smokers.&#xA;
-        &#xA;Control your blood pressure. Most people can do this with regular exercise, a balanced diet and by keeping a healthy weight. In some cases, you might need medication prescribed by your doctor.&#xA;
-        &#xA;Reduce your risk of cardiovascular disease. Diabetes and cardiovascular disease have many risk factors in common, including obesity and physical inactivity.&#xA;
-        &#xA;See your doctor for regular check-ups. As you get older, it\’s a good idea to regularly check your blood glucose, blood pressure and blood cholesterol levels.
+    <string name="first_aid_diabetes">Check your risk of diabetes. Take the Life! risk assessment test and learn more about your risk of developing type 2 diabetes. A 12+ score indicates that you are at high risk and may be eligible for the Life! program - a free Victorian lifestyle modification program that helps you reduce your risk of type 2 diabetes and cardiovascular disease, or call 13 RISK (13 7475).\n
+        \nManage your weight. Excess body fat, particularly if stored around the abdomen, can increase the body\’s resistance to the hormone insulin. This can lead to type 2 diabetes.\n
+        \nExercise regularly. Moderate physical activity on most days of the week helps manage weight, reduce blood glucose levels and may also improve blood pressure and cholesterol.\n
+        \nEat a balanced, healthy diet. Reduce the amount of fat in your diet, especially saturated and trans fats. Eat more fruit, vegetables and high-fibre foods. Cut back on salt.\n
+        \nLimit takeaway and processed foods. \‘Convenience meals\’ are usually high in salt, fat and kilojoules. It\’s best to cook for yourself using fresh ingredients whenever possible.\n
+        \nLimit your alcohol intake. Too much alcohol can lead to weight gain and may increase your blood pressure and triglyceride levels. Men should have no more than two standard drinks a day and women should have no more than one.\n
+        \nQuit smoking. Smokers are twice as likely to develop diabetes as non-smokers.\n
+        \nControl your blood pressure. Most people can do this with regular exercise, a balanced diet and by keeping a healthy weight. In some cases, you might need medication prescribed by your doctor.\n
+        \nReduce your risk of cardiovascular disease. Diabetes and cardiovascular disease have many risk factors in common, including obesity and physical inactivity.\n
+        \nSee your doctor for regular check-ups. As you get older, it\’s a good idea to regularly check your blood glucose, blood pressure and blood cholesterol levels.
     </string>
 
     <!-- Measurement -->
     <string name="measurement_page_title">Want Our Advice?</string>
     <string name="measurement_page_subtitle">We would like to ask a few questions about your asthma condition to help make a preliminary assessment of your condition.
-        &#xA;None of your information will be saved throughout this process, to protect your privacy</string>
+        \nNone of your information will be saved throughout this process, to protect your privacy</string>
     <string name="measurement_page_button1">Let\'s Do It</string>
     <string name="measurement_page_button2">Do It Later</string>
     <string name="next_stage_button">GO ON</string>
@@ -191,47 +191,47 @@
     <string name="severity_button2">Moderate</string>
     <string name="severity_button3">Severe</string>
     <string name="severity_button4">Threatening</string>
-    <string name="severity_mild"><b>Your symptoms appear to be mild</b>&#xA;
-        &#xA;We suggest that you use a spacer, if one can be used with your preventer inhaler.
-        &#xA;Carry your reliever at all times.&#xA;
-        &#xA;<b>Your asthma is under control when:</b>&#xA;
-        &#xA;&#009;&#009;&#8226;You don’t have asthma symptoms most days (wheeze, tight chest, a cough or feeling breathless)
-        &#xA;&#009;&#009;&#8226;You have no cough or wheeze at night
-        &#xA;&#009;&#009;&#8226;You can do all your usual activities and exercise freely
-        &#xA;&#009;&#009;&#8226;Most days you don’t need a reliever&#xA;
-        &#xA;Any alterations in medication should be made in consultation with your personal physician
+    <string name="severity_mild"><b>Your symptoms appear to be mild</b>\n
+        \nWe suggest that you use a spacer, if one can be used with your preventer inhaler.
+        \nCarry your reliever at all times.\n
+        \n<b>Your asthma is under control when:</b>\n
+        \n\t-You don’t have asthma symptoms most days (wheeze, tight chest, a cough or feeling breathless)
+        \n\t-You have no cough or wheeze at night
+        \n\t-You can do all your usual activities and exercise freely
+        \n\t-Most days you don’t need a reliever\n
+        \nAny alterations in medication should be made in consultation with your personal physician
     </string>
-    <string name="severity_moderate"><b>Your symptoms appear to be moderate</b>&#xA;
-        &#xA;We suggest stepping up your preventer medicine.
-        &#xA;Use your reliever as often as needed – through a spacer, if one can be used with your reliever inhaler.&#xA;
-        &#xA;<b>Caution! Your asthma is getting worse when:</b>&#xA;
-        &#xA;&#009;&#009;&#8226;You have symptoms most days (wheeze, tight chest, a cough or feeling breathless)
-        &#xA;&#009;&#009;&#8226;You are waking at night with symptoms
-        &#xA;&#009;&#009;&#8226;You are getting a cold
-        &#xA;&#009;&#009;&#8226;You feel short of breath when you exercise&#xA;
-        &#xA;Any alterations in medication should be made in consultation with your personal physician
+    <string name="severity_moderate"><b>Your symptoms appear to be moderate</b>\n
+        \nWe suggest stepping up your preventer medicine.
+        \nUse your reliever as often as needed – through a spacer, if one can be used with your reliever inhaler.\n
+        \n<b>Caution! Your asthma is getting worse when:</b>\n
+        \n\t-You have symptoms most days (wheeze, tight chest, a cough or feeling breathless)
+        \n\t-You are waking at night with symptoms
+        \n\t-You are getting a cold
+        \n\t-You feel short of breath when you exercise\n
+        \nAny alterations in medication should be made in consultation with your personal physician
     </string>
-    <string name="severity_severe"><b>Your symptoms appear to be severe</b>&#xA;
-        &#xA;Continue your medicine for “getting worse”
-        &#xA;Start prednisone if you have it
-        &#xA;<b>Important: You need to see your doctor today</b>&#xA;
-        &#xA;<b>Caution! Your asthma is getting severe when:</b>&#xA;
-        &#xA;&#009;&#009;&#8226;Your symptoms are getting severe (wheeze, tight chest, a cough or feeling breathless)
-        &#xA;&#009;&#009;&#8226;Your reliever is only helping for 2‐3 hours, or you are using more than 12 puffs a day
-        &#xA;&#009;&#009;&#8226;You feel you need to see your doctor&#xA;
-        &#xA;Any alterations in medication should be made in consultation with your personal physician
+    <string name="severity_severe"><b>Your symptoms appear to be severe</b>\n
+        \nContinue your medicine for “getting worse”
+        \nStart prednisone if you have it
+        \n<b>Important: You need to see your doctor today</b>\n
+        \n<b>Caution! Your asthma is getting severe when:</b>\n
+        \n\t-Your symptoms are getting severe (wheeze, tight chest, a cough or feeling breathless)
+        \n\t-Your reliever is only helping for 2‐3 hours, or you are using more than 12 puffs a day
+        \n\t-You feel you need to see your doctor\n
+        \nAny alterations in medication should be made in consultation with your personal physician
     </string>
-    <string name="severity_emergency"><b>Let’s keep calm…</b>&#xA;
-        &#xA;&#009;&#009;&#8226;Dial 111 for ambulance
-        &#xA;&#009;&#009;&#8226;Keep using your reliever as often as needed – through a spacer, if one can be used with your reliever inhaler
-        &#xA;&#009;&#009;&#8226;Even if you seem to get better seek medical help right away
-        &#xA;&#009;&#009;&#8226;If you haven’t started taking your prednisone, start now&#xA;
-        &#xA;<b>Emergency:</b>&#xA;
-        &#xA;&#009;&#009;&#8226;Your symptoms are getting more severe quickly
-        &#xA;&#009;&#009;&#8226;You are finding it hard to speak or breathe
-        &#xA;&#009;&#009;&#8226;Your reliever is not helping much
-        &#xA;&#009;&#009;&#8226;You are using your reliever every 1‐2 hours&#xA;
-        &#xA;Any alterations in medication should be made in consultation with your personal physician
+    <string name="severity_emergency"><b>Let’s keep calm…</b>\n
+        \n\t-Dial 111 for ambulance
+        \n\t-Keep using your reliever as often as needed – through a spacer, if one can be used with your reliever inhaler
+        \n\t-Even if you seem to get better seek medical help right away
+        \n\t-If you haven’t started taking your prednisone, start now\n
+        \n<b>Emergency:</b>\n
+        \n\t-Your symptoms are getting more severe quickly
+        \n\t-You are finding it hard to speak or breathe
+        \n\t-Your reliever is not helping much
+        \n\t-You are using your reliever every 1‐2 hours\n
+        \nAny alterations in medication should be made in consultation with your personal physician
     </string>
 
     <!-- Record -->
