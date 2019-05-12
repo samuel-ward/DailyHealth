@@ -17,6 +17,8 @@ protected void onCreate(Bundle savedInstanceState) {
         final View firstAidButton = findViewById(R.id.container_homepage_firstaid);
         final View measurementButton = findViewById(R.id.container_homepage_measurement);
         final View healthRecordButton = findViewById(R.id.container_homepage_healthrecord);
+        final View makeAppointmentButton = findViewById(R.id.container_homepage_appointment);
+        final View directSupportButton = findViewById(R.id.container_homepage_service);
 
         //Setting Navigation Buttons
         //Disease
@@ -51,6 +53,24 @@ protected void onCreate(Bundle savedInstanceState) {
                 @Override
                 public void onClick(View v) {
                         Intent i = new Intent(HomePageActivity.this, RecordIntro.class);
+                        startActivity(i);
+                }
+        });
+
+        //Make Appointment
+        makeAppointmentButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                        Intent i = new Intent();
+                        startActivity(i);
+                }
+        });
+
+        //Direct Support
+        directSupportButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                        Intent i = new Intent(HomePageActivity.this, SupportIntro.class);
                         startActivity(i);
                 }
         });
