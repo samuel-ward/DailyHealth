@@ -32,7 +32,7 @@ public class SupportOnline extends AppCompatActivity {
         sendArrowButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                //Add chat text to chatListView
             }
         });
     }
