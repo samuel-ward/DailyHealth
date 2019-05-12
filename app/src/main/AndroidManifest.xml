@@ -13,7 +13,11 @@
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".RegisterIntro"></activity>
+        <activity android:name=".RegisterPage4"></activity>
+        <activity android:name=".RegisterPage3" />
+        <activity android:name=".RegisterPage2" />
+        <activity android:name=".RegisterPage1" />
+        <activity android:name=".RegisterIntro" />
         <activity android:name=".SupportOnline" />
         <activity android:name=".SupportHotline" />
         <activity android:name=".SupportIntro" />

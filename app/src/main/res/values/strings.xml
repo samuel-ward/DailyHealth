@@ -14,11 +14,31 @@
     <string name="action_skip">Skip</string>
 
     <!-- Register -->
+    <!-- Intro -->
     <string name="register_title">Sign Up</string>
     <string name="register_username">Username</string>
     <string name="register_email">Email</string>
     <string name="register_password">Password</string>
     <string name="register_tandc">By signing up you agree to our terms and conditions, as well as our privacy policy</string>
+    <!-- Page 1 -->
+    <string name="register_1of4">1 of 4</string>
+    <string name="register_page1_t">Male or Female?</string>
+    <string name="register_page1_s">Men and women have different requirements when it comes to health</string>
+    <string name="female">Female</string>
+    <string name="male">Male</string>
+    <!-- Page 2 -->
+    <string name="register_2of4">2 of 4</string>
+    <string name="register_page2_t">How old are you?</string>
+    <string name="register_page2_s">Different age ranges have different health goals</string>
+    <!-- Page 3 -->
+    <string name="register_3of4">1 of 4</string>
+    <string name="register_page3_t">How much do you weigh?</string>
+    <string name="register_page3_s">This is used to set up recommendations for you</string>
+    <!-- Page 4 -->
+    <string name="register_4of4">1 of 4</string>
+    <string name="register_page4_t">How tall are you?</string>
+    <string name="register_page4_s">This is used to set up recommendations for you</string>
+    <string name="register_finish">Finish</string>
 
     <!-- Home Page -->
     <string name="home_page">Home Page</string>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".RegisterPage2">
+
+    <TextView
+        android:id="@+id/lbl_register_page2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:textSize="15sp"
+        android:textAlignment="center"
+        android:text="@string/register_2of4"/>
+
+    <TextView
+        android:id="@+id/lbl_register_page2_t"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="50dp"
+        android:textSize="35sp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:text="@string/register_page2_t"/>
+
+    <TextView
+        android:id="@+id/lbl_register_page2_s"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:text="@string/register_page2_s"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp">
+
+        <NumberPicker
+            android:id="@+id/np_register1"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"></NumberPicker>
+
+        <ImageView
+            android:id="@+id/icon_back_arrow"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentBottom="true"
+            android:contentDescription="@string/back_arrow"
+            app:srcCompat="@drawable/ic_arrow_back_black_24dp"
+            android:tint="@color/design_default_color_primary_dark" />
+
+        <Button
+            android:id="@+id/btn_register_go_on"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:text="@string/next_stage_button"  />
+
+    </RelativeLayout>
+
+</LinearLayout>
