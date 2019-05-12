@@ -1,11 +1,17 @@
 package com.example.dailyhealth.ui.login;
 
+import android.Manifest;
 import android.app.Activity;
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.support.annotation.Nullable;
 import android.support.annotation.StringRes;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -18,6 +24,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.dailyhealth.HomePageActivity;
 import com.example.dailyhealth.R;
 import com.example.dailyhealth.ui.login.LoginViewModel;
 import com.example.dailyhealth.ui.login.LoginViewModelFactory;
@@ -33,11 +40,30 @@ public class LoginActivity extends AppCompatActivity {
         loginViewModel = ViewModelProviders.of(this, new LoginViewModelFactory())
                 .get(LoginViewModel.class);
 
-        final EditText usernameEditText = findViewById(R.id.username);
-        final EditText passwordEditText = findViewById(R.id.password);
-        final Button loginButton = findViewById(R.id.login);
+        final EditText usernameEditText = findViewById(R.id.et_username);
+        final EditText passwordEditText = findViewById(R.id.et_password);
+        final Button loginButton = findViewById(R.id.btn_login);
         final ProgressBar loadingProgressBar = findViewById(R.id.loading);
+        final Button skipButton = findViewById(R.id.btn_skip);
+        final Button registerButton = findViewById(R.id.btn_register);
 
+        //Skip Button
+        skipButton.setEnabled(true);
+        skipButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try{
+                    Intent i = new Intent(LoginActivity.this, HomePageActivity.class);
+                    startActivity(i);
+                } catch(Exception e){
+                }
+            }
+        });
+
+        //Register Button
+        registerButton.setEnabled(true);
+
+        //Login Button
         loginViewModel.getLoginFormState().observe(this, new Observer<LoginFormState>() {
             @Override
             public void onChanged(@Nullable LoginFormState loginFormState) {
@@ -123,5 +149,12 @@ public class LoginActivity extends AppCompatActivity {
 
     private void showLoginFailed(@StringRes Integer errorString) {
         Toast.makeText(getApplicationContext(), errorString, Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
+        if(grantResults.length > 0 && grantResults[0] != PackageManager.PERMISSION_GRANTED)
+            finish();
+
     }
 }
