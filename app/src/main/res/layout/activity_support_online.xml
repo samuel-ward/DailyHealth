@@ -11,7 +11,8 @@
     <!-- Header -->
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient_dark">
 
         <TextView
             android:id="@+id/lbl_online"
@@ -21,7 +22,8 @@
             android:paddingTop="100dp"
             android:text="@string/support_online_service_title"
             android:textAlignment="gravity"
-            android:textSize="35sp" />
+            android:textSize="35sp"
+            android:textColor="@color/colorWBlue"/>
 
         <ImageView
             android:id="@+id/icon_back_arrow"
@@ -30,7 +32,7 @@
             android:layout_marginTop="76dp"
             android:contentDescription="@string/back_arrow"
             app:srcCompat="@drawable/ic_arrow_back_black_24dp"
-            android:tint="@color/design_default_color_primary_dark" />
+            android:tint="@color/colorWBlue" />
 
         <ImageView
             android:id="@+id/icon_online"

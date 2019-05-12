@@ -18,7 +18,8 @@
             android:id="@+id/header_disease_intro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:background="@drawable/gradient_dark">
 
             <TextView
                 android:id="@+id/lbl_home"
@@ -28,7 +29,8 @@
                 android:paddingTop="100dp"
                 android:text="@string/disease_intro"
                 android:textAlignment="gravity"
-                android:textSize="35sp" />
+                android:textSize="35sp"
+                android:textColor="@color/colorWBlue"/>
 
             <ImageView
                 android:id="@+id/icon_back_arrow"
@@ -37,7 +39,7 @@
                 android:layout_marginTop="76dp"
                 android:contentDescription="@string/back_arrow"
                 app:srcCompat="@drawable/ic_arrow_back_black_24dp"
-                android:tint="@color/design_default_color_primary_dark" />
+                android:tint="@color/colorWBlue" />
 
             <ImageView
                 android:id="@+id/icon_disease_intro"
@@ -46,7 +48,7 @@
                 android:layout_alignParentEnd="true"
                 android:contentDescription="@string/diabetes"
                 app:srcCompat="@drawable/ic_introduction"
-                android:tint="@color/design_default_color_primary"/>
+                android:tint="@color/colorLBlue"/>
 
         </RelativeLayout>
 
@@ -86,7 +88,7 @@
                         android:scaleType="fitXY"
                         android:adjustViewBounds="true"
                         android:src="@drawable/ic_asthma"
-                        android:tint="@color/design_default_color_primary_dark"
+                        android:tint="@color/colorDBlue"
                         android:contentDescription="@string/asthma"/>
 
 
@@ -117,7 +119,7 @@
                         android:scaleType="fitXY"
                         android:adjustViewBounds="true"
                         android:src="@drawable/ic_diabetes"
-                        android:tint="@color/design_default_color_primary_dark"
+                        android:tint="@color/colorDBlue"
                         android:contentDescription="@string/diabetes"/>
 
 

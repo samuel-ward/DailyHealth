@@ -13,7 +13,8 @@
         android:id="@+id/header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:background="@drawable/gradient_dark">
 
         <TextView
             android:id="@+id/lbl_title"
@@ -23,7 +24,8 @@
             android:paddingTop="100dp"
             android:text="@string/results"
             android:textAlignment="gravity"
-            android:textSize="35sp" />
+            android:textSize="35sp"
+            android:textColor="@color/colorWBlue"/>
 
         <ImageView
             android:id="@+id/icon_back_arrow"
@@ -41,7 +43,7 @@
             android:layout_alignParentEnd="true"
             android:contentDescription="@string/measurement"
             app:srcCompat="@drawable/ic_measurement"
-            android:tint="@color/colorBlue"/>
+            android:tint="@color/colorLBlue"/>
 
     </RelativeLayout>
 
