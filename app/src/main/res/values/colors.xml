@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Defaults -->
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+
+    <!-- Sets -->
+    <color name="colorDBlue">#162f6f</color>
+    <color name="colorBlue">#2b479f</color>
+    <color name="colorLBlue">#5e82d5</color>
+    <color name="colorWBlue">#9aaad1</color>
+
 </resources>
