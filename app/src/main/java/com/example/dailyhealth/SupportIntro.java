@@ -32,7 +32,7 @@ public class SupportIntro extends AppCompatActivity {
         onlineChatButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent();
+                Intent i = new Intent(SupportIntro.this, SupportOnline.class);
                 startActivity(i);
             }
         });
@@ -41,7 +41,7 @@ public class SupportIntro extends AppCompatActivity {
         hotlineButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent();
+                Intent i = new Intent(SupportIntro.this, SupportHotline.class);
                 startActivity(i);
             }
         });

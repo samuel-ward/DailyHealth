@@ -11,4 +11,9 @@
     <color name="colorLBlue">#5e82d5</color>
     <color name="colorWBlue">#9aaad1</color>
 
+    <!-- Others -->
+    <color name="colorDGray">#2f4f4f</color>
+    <color name="colorGray">#708090</color>
+    <color name="colorLGray">#778899</color>
+
 </resources>

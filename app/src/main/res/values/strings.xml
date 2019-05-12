@@ -224,5 +224,7 @@
     <string name="support_online_service_write">Write a message</string>
     <string name="support_hotline_title">Hot-Line</string>
     <string name="support_hotline_calling">Calling&#8230;</string>
+    <string name="support_hotline_dotor">Doctor</string>
+    <string name="support_chat_bubble">Chat Bubble</string>
 
 </resources>
