@@ -32,7 +32,7 @@
             android:layout_marginTop="76dp"
             android:contentDescription="@string/back_arrow"
             app:srcCompat="@drawable/ic_arrow_back_black_24dp"
-            android:tint="@color/design_default_color_primary_dark" />
+            android:tint="@color/colorBlue" />
 
         <ImageView
             android:id="@+id/icon_disease_intro"
@@ -41,7 +41,7 @@
             android:layout_alignParentEnd="true"
             android:contentDescription="@string/measurement"
             app:srcCompat="@drawable/ic_measurement"
-            android:tint="@color/design_default_color_primary"/>
+            android:tint="@color/colorBlue"/>
 
     </RelativeLayout>
 
@@ -89,15 +89,14 @@
                 android:backgroundTint="@color/colorSevere"
                 android:text="@string/severity_button3"/>
 
-            <!--<Button
+            <Button
                 android:id="@+id/btn_severity4"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:padding="10dp"
                 android:layout_height="match_parent"
-                style="?android:attr/buttonBarButtonStyle"
-                android:backgroundTin="@color/colorEmergency"
-                android:text="@string/severity_button4"/>-->
+                android:backgroundTint="@color/colorEmergency"
+                android:text="@string/severity_button4"/>
 
         </LinearLayout>
 

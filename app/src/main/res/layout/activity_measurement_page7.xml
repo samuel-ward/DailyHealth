@@ -54,7 +54,7 @@
                     android:layout_centerVertical="true"
                     android:src="@drawable/ic_check_circle_black_24dp"
                     android:contentDescription="@string/option"
-                    android:tint="@color/design_default_color_primary"/>
+                    android:tint="@color/colorLBlue"/>
 
                 <TextView
                     android:id="@+id/lbl_measurement7_opt1"
@@ -91,7 +91,7 @@
                     android:layout_centerVertical="true"
                     android:src="@drawable/ic_check_circle_black_24dp"
                     android:contentDescription="@string/option"
-                    android:tint="@color/design_default_color_primary"/>
+                    android:tint="@color/colorLBlue"/>
 
                 <TextView
                     android:id="@+id/lbl_measurement7_opt2"
@@ -128,7 +128,7 @@
                     android:layout_centerVertical="true"
                     android:src="@drawable/ic_check_circle_black_24dp"
                     android:contentDescription="@string/option"
-                    android:tint="@color/design_default_color_primary"/>
+                    android:tint="@color/colorLBlue"/>
 
                 <TextView
                     android:id="@+id/lbl_measurement7_opt3"
@@ -165,7 +165,7 @@
                     android:layout_centerVertical="true"
                     android:src="@drawable/ic_check_circle_black_24dp"
                     android:contentDescription="@string/option"
-                    android:tint="@color/design_default_color_primary"/>
+                    android:tint="@color/colorLBlue"/>
 
                 <TextView
                     android:id="@+id/lbl_measurement7_opt4"
@@ -196,7 +196,7 @@
             android:layout_alignParentBottom="true"
             android:contentDescription="@string/back_arrow"
             app:srcCompat="@drawable/ic_arrow_back_black_24dp"
-            android:tint="@color/design_default_color_primary_dark" />
+            android:tint="@color/colorBlue" />
 
         <Button
             android:id="@+id/btn_measurement_go_on"

@@ -1,8 +1,9 @@
 package com.example.dailyhealth;
 
+import java.io.Serializable;
 import java.lang.Math;
 
-public class AsthmaMeasurement {
+public class AsthmaMeasurement implements Serializable {
     //Private
     //Gathered from measurement pages
     private int measuredPeakFlow;
@@ -17,6 +18,7 @@ public class AsthmaMeasurement {
     private int height;
     private boolean sex;
     //Calculations
+    private boolean[] emergency;
 
     //Public
     //Constructor
@@ -28,6 +30,7 @@ public class AsthmaMeasurement {
         respiratoryEffort = 0;
         heartRate = 0;
         exhaustion = 0;
+        emergency = new boolean[6];
     }
 
     //Set
@@ -65,9 +68,8 @@ public class AsthmaMeasurement {
 
     }
 
-    int calculateSeverity(){
+    int calculateSeverityTotal(){
         int severityTotal = 0;
-        boolean[] emergency = new boolean[6];
         for(int i = 0; i < emergency.length; i++){emergency[i]=false;}
 
         //Flow% -- [0]
@@ -77,7 +79,7 @@ public class AsthmaMeasurement {
             severityTotal+=1;
         } else if(calculateFlowPercentage(measuredPeakFlow,predictedPeakFlow) > 33 && calculateFlowPercentage(measuredPeakFlow,predictedPeakFlow) <= 50){
             severityTotal+=2;
-        } else {
+        } else if(calculateFlowPercentage(measuredPeakFlow,predictedPeakFlow) <=33) {
             severityTotal+=3;
             emergency[0] = true;
         }
@@ -86,13 +88,17 @@ public class AsthmaMeasurement {
         switch (sentenceFormation){
             case 0:
                 severityTotal+=0;
+                break;
             case 1:
                 severityTotal+=1;
+                break;
             case 2:
                 severityTotal+=2;
+                break;
             case 3:
                 severityTotal+=3;
                 emergency[1] = true;
+                break;
         }
 
         //Respiratory Rate
@@ -109,13 +115,17 @@ public class AsthmaMeasurement {
         switch (respiratoryEffort){
             case 0:
                 severityTotal+=0;
+                break;
             case 1:
                 severityTotal+=1;
+                break;
             case 2:
                 severityTotal+=2;
+                break;
             case 3:
                 severityTotal+=3;
                 emergency[3] = true;
+                break;
         }
 
         //Heart Rate
@@ -132,38 +142,45 @@ public class AsthmaMeasurement {
         switch (exhaustion){
             case 0:
                 severityTotal+=0;
+                break;
             case 1:
                 severityTotal+=1;
+                break;
             case 2:
                 severityTotal+=2;
+                break;
             case 3:
                 severityTotal+=3;
                 emergency[5] = true;
+                break;
         }
 
-        //Calculate
-        int severity = 0;
-        if(severityTotal <= 2){
-            //Severity = Mild
-            severity = 0;
-        } else if (severityTotal <= 6 && severityTotal > 2){
-            //Severity = Moderate
-            severity = 1;
-        } else if (severityTotal <= 14 && severityTotal > 6){
-            //Severity = Severe
-            severity = 2;
-        } else {
-            //Severity = Emergency
-            severity = 3;
-        }
+        return severityTotal;
+    }
+
+    int calculateSeverity(int severityTotal){
+
         //Emergency -- if 2+ emergency = true severity = emergency
         int temp=0;
         for(int i = 0; i < emergency.length; i++){
             if (emergency[i]){temp+=1;}
         }
-        if (temp >= 2){severity=3;}
+        if (temp >= 2){return 3;}
 
-        return severity;
+        //Regular Severity Check
+        if(severityTotal <= 2){
+            //Severity = Mild
+            return  0;
+        } else if (severityTotal <= 6 && severityTotal > 2){
+            //Severity = Moderate
+            return  1;
+        } else if (severityTotal <= 14 && severityTotal > 6){
+            //Severity = Severe
+            return  2;
+        } else {
+            //Severity = Emergency
+            return  3;
+        }
     }
 
 }

@@ -38,6 +38,66 @@ public class AsthmaMeasurementTest {
     }
 
     @Test
+    public void asthma_measurement_severityTotal_mild_all(){
+        //All Mild
+        int expected = 0;
+        test.setRespiratoryEffort(0);
+        test.setRespiratoryRate(17);
+        test.setSentenceFormation(0);
+        test.setExhaustion(0);
+        test.setHeartRate(80);
+        test.setPredictedPeakFlow(660);
+        test.setMeasuredPeakFlow(600);
+        int actual = test.calculateSeverityTotal();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void asthma_measurement_severityTotal_moderate_all(){
+        //All Moderate
+        int expected = 6;
+        test.setRespiratoryEffort(1);
+        test.setRespiratoryRate(22);
+        test.setSentenceFormation(1);
+        test.setExhaustion(1);
+        test.setHeartRate(110);
+        test.setPredictedPeakFlow(660);
+        test.setMeasuredPeakFlow(400);
+        int actual = test.calculateSeverityTotal();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void asthma_measurement_severityTotal_severe_all(){
+        //All Severe
+        int expected = 12;
+        test.setRespiratoryEffort(2);
+        test.setRespiratoryRate(22);
+        test.setSentenceFormation(2);
+        test.setExhaustion(2);
+        test.setHeartRate(131);
+        test.setPredictedPeakFlow(660);
+        test.setMeasuredPeakFlow(250);
+        int actual = test.calculateSeverityTotal();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void asthma_measurement_severityTotal_emergency_all(){
+        //All Emergency
+        int expected = 18;
+        test.setRespiratoryEffort(3);
+        test.setRespiratoryRate(24);
+        test.setSentenceFormation(3);
+        test.setExhaustion(3);
+        test.setHeartRate(150);
+        test.setPredictedPeakFlow(660);
+        test.setMeasuredPeakFlow(120);
+        int actual = test.calculateSeverityTotal();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
     public void asthma_measurement_severity_mild_all(){
         //All Mild
         int expected = 0;
@@ -48,7 +108,7 @@ public class AsthmaMeasurementTest {
         test.setHeartRate(80);
         test.setPredictedPeakFlow(660);
         test.setMeasuredPeakFlow(600);
-        int actual = test.calculateSeverity();
+        int actual = test.calculateSeverity(test.calculateSeverityTotal());
         Assert.assertEquals(expected, actual);
     }
 
@@ -62,8 +122,8 @@ public class AsthmaMeasurementTest {
         test.setExhaustion(1);
         test.setHeartRate(110);
         test.setPredictedPeakFlow(660);
-        test.setMeasuredPeakFlow(500);
-        int actual = test.calculateSeverity();
+        test.setMeasuredPeakFlow(400);
+        int actual = test.calculateSeverity(test.calculateSeverityTotal());
         Assert.assertEquals(expected, actual);
     }
 
@@ -75,10 +135,10 @@ public class AsthmaMeasurementTest {
         test.setRespiratoryRate(22);
         test.setSentenceFormation(2);
         test.setExhaustion(2);
-        test.setHeartRate(80);
+        test.setHeartRate(131);
         test.setPredictedPeakFlow(660);
-        test.setMeasuredPeakFlow(500);
-        int actual = test.calculateSeverity();
+        test.setMeasuredPeakFlow(250);
+        int actual = test.calculateSeverity(test.calculateSeverityTotal());
         Assert.assertEquals(expected, actual);
     }
 
@@ -93,7 +153,7 @@ public class AsthmaMeasurementTest {
         test.setHeartRate(150);
         test.setPredictedPeakFlow(660);
         test.setMeasuredPeakFlow(120);
-        int actual = test.calculateSeverity();
+        int actual = test.calculateSeverity(test.calculateSeverityTotal());
         Assert.assertEquals(expected, actual);
     }
 

@@ -6,8 +6,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 public class MeasurementPage3 extends AppCompatActivity {
+
+    int sentenceFormation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +20,52 @@ public class MeasurementPage3 extends AppCompatActivity {
         //Setting Views
         final ImageView backArrowButton = findViewById(R.id.icon_back_arrow);
         final Button forwardButton = findViewById(R.id.btn_measurement_go_on);
+        final ImageView option1 = findViewById(R.id.btn_opt1);
+        final ImageView option2 = findViewById(R.id.btn_opt2);
+        final ImageView option3 = findViewById(R.id.btn_opt3);
+        final ImageView option4 = findViewById(R.id.btn_opt4);
+
+        //Option Select
+        option1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sentenceFormation = 0;
+                option1.setColorFilter(R.color.colorDBlue);
+                option2.setColorFilter(R.color.colorLBlue);
+                option3.setColorFilter(R.color.colorLBlue);
+                option4.setColorFilter(R.color.colorLBlue);
+            }
+        });
+        option2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sentenceFormation = 1;
+                option1.setColorFilter(R.color.colorLBlue);
+                option2.setColorFilter(R.color.colorDBlue);
+                option3.setColorFilter(R.color.colorLBlue);
+                option4.setColorFilter(R.color.colorLBlue);
+            }
+        });
+        option3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sentenceFormation = 2;
+                option1.setColorFilter(R.color.colorLBlue);
+                option2.setColorFilter(R.color.colorLBlue);
+                option3.setColorFilter(R.color.colorDBlue);
+                option4.setColorFilter(R.color.colorLBlue);
+            }
+        });
+        option4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sentenceFormation = 3;
+                option1.setColorFilter(R.color.colorLBlue);
+                option2.setColorFilter(R.color.colorLBlue);
+                option3.setColorFilter(R.color.colorLBlue);
+                option4.setColorFilter(R.color.colorDBlue);
+            }
+        });
 
         //Setting Navigation
         //Back Arrow
@@ -33,10 +82,18 @@ public class MeasurementPage3 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 try{
-                    Intent i = new Intent(MeasurementPage3.this, MeasurementPage4.class);
-                    startActivity(i);
-                }catch(Exception e){
 
+                    AsthmaMeasurement measurement;
+                    Toast.makeText(MeasurementPage3.this, "You have chosen " + sentenceFormation, Toast.LENGTH_LONG).show();
+                    measurement = (AsthmaMeasurement) getIntent().getSerializableExtra("Measurement");
+                    measurement.setSentenceFormation(sentenceFormation);
+
+                    Intent i = new Intent(MeasurementPage3.this, MeasurementPage4.class);
+                    i.putExtra("Measurement", measurement);
+                    startActivity(i);
+
+                }catch(Exception e){
+                    Toast.makeText(MeasurementPage3.this, "Please choose an option", Toast.LENGTH_LONG).show();
                 }
             }
         });

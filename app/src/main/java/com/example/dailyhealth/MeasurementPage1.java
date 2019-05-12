@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.NumberPicker;
+import android.widget.Toast;
 
 public class MeasurementPage1 extends AppCompatActivity {
 
@@ -17,6 +19,18 @@ public class MeasurementPage1 extends AppCompatActivity {
         //Setting Views
         final ImageView backArrowButton = findViewById(R.id.icon_back_arrow);
         final Button forwardButton = findViewById(R.id.btn_measurement_go_on);
+        final NumberPicker measuredFlowPicker = findViewById(R.id.np_measurement1);
+
+        //Number Picker
+        int PICKER_RANGE = 10;
+        int NUMBER_OF_VALUES = 70;
+        final String [] displayValues = new String[NUMBER_OF_VALUES];
+        for(int i = 0; i < NUMBER_OF_VALUES; i++){
+            displayValues[i] = String.valueOf(PICKER_RANGE * (i+1) * 100);
+        }
+        measuredFlowPicker.setMinValue(0);
+        measuredFlowPicker.setMaxValue(displayValues.length -1);
+        measuredFlowPicker.setValue(displayValues.length/2);
 
         //Setting Navigation
         //Back Arrow
@@ -33,8 +47,16 @@ public class MeasurementPage1 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 try{
+
+                    int chosenValue = measuredFlowPicker.getValue();
+                    Toast.makeText(MeasurementPage1.this, "You have chosen " + chosenValue, Toast.LENGTH_LONG).show();
+                    AsthmaMeasurement measurement = new AsthmaMeasurement();
+                    measurement.setMeasuredPeakFlow(chosenValue);
+
                     Intent i = new Intent(MeasurementPage1.this, MeasurementPage2.class);
+                    i.putExtra("Measurement", measurement);
                     startActivity(i);
+
                 }catch(Exception e){
 
                 }

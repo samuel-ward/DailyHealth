@@ -190,7 +190,7 @@
     <string name="severity_button1">Mild</string>
     <string name="severity_button2">Moderate</string>
     <string name="severity_button3">Severe</string>
-    <string name="severity_button4">Threatening</string>
+    <string name="severity_button4">Emergency</string>
     <string name="severity_mild"><b>Your symptoms appear to be mild</b>\n
         \nWe suggest that you use a spacer, if one can be used with your preventer inhaler.
         \nCarry your reliever at all times.\n
