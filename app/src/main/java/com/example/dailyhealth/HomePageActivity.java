@@ -18,6 +18,7 @@ protected void onCreate(Bundle savedInstanceState) {
         final View measurementButton = findViewById(R.id.container_homepage_measurement);
         final View healthRecordButton = findViewById(R.id.container_homepage_healthrecord);
 
+        //Setting Navigation Buttons
         //Disease
         diseaseIntroButton.setOnClickListener(new View.OnClickListener() {
                 @Override
