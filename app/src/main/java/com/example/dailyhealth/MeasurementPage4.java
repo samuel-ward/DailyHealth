@@ -22,15 +22,20 @@ public class MeasurementPage4 extends AppCompatActivity {
         final NumberPicker respiratoryRatePicker = findViewById(R.id.np_measurement4);
 
         //Number Picker
-        int PICKER_RANGE = 1;
-        int NUMBER_OF_VALUES = 50;
-        final String [] displayValues = new String[NUMBER_OF_VALUES];
-        for(int i = 0; i < NUMBER_OF_VALUES; i++){
-            displayValues[i] = String.valueOf(PICKER_RANGE * (i+1));
-        }
-        respiratoryRatePicker.setMinValue(0);
-        respiratoryRatePicker.setMaxValue(displayValues.length -1);
-        respiratoryRatePicker.setValue(displayValues.length/2);
+        NumberPicker.Formatter format = new NumberPicker.Formatter() {
+            @Override
+            public String format(int value) {
+                //For consistency sake
+                int temp = value;
+                return ""+temp;
+            }
+        };
+        int MAX = 45;
+        int MIN = 5;
+        respiratoryRatePicker.setFormatter(format);
+        respiratoryRatePicker.setMinValue(MIN);
+        respiratoryRatePicker.setMaxValue(MAX);
+        respiratoryRatePicker.setValue((MAX-MIN)/2);
 
         //Setting Navigation
         //Back Arrow

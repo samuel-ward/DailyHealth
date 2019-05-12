@@ -45,7 +45,8 @@
             android:id="@+id/np_measurement6"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"></NumberPicker>
+            android:layout_centerHorizontal="true"
+            android:descendantFocusability="blocksDescendants"></NumberPicker>
 
         <ImageView
             android:id="@+id/icon_back_arrow"

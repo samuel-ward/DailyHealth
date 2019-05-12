@@ -22,15 +22,20 @@ public class MeasurementPage6 extends AppCompatActivity {
         final NumberPicker heartRatePicker = findViewById(R.id.np_measurement6);
 
         //Number Picker
-        int PICKER_RANGE = 1;
-        int NUMBER_OF_VALUES = 90;
-        final String [] displayValues = new String[NUMBER_OF_VALUES];
-        for(int i = 0; i < NUMBER_OF_VALUES; i++){
-            displayValues[i] = String.valueOf(PICKER_RANGE * (i+45));
-        }
-        heartRatePicker.setMinValue(0);
-        heartRatePicker.setMaxValue(displayValues.length -1);
-        heartRatePicker.setValue(displayValues.length/2);
+        NumberPicker.Formatter format = new NumberPicker.Formatter() {
+            @Override
+            public String format(int value) {
+                //For consistency sake
+                int temp = value;
+                return ""+temp;
+            }
+        };
+        int MAX = 150;
+        int MIN = 30;
+        heartRatePicker.setFormatter(format);
+        heartRatePicker.setMinValue(MIN);
+        heartRatePicker.setMaxValue(MAX);
+        heartRatePicker.setValue((MAX-MIN)/2);
 
         //Setting Navigation
         //Back Arrow

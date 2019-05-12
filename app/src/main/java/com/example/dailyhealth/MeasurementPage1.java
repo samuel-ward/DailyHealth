@@ -22,15 +22,19 @@ public class MeasurementPage1 extends AppCompatActivity {
         final NumberPicker measuredFlowPicker = findViewById(R.id.np_measurement1);
 
         //Number Picker
-        int PICKER_RANGE = 100;
-        int NUMBER_OF_VALUES = 700;
-        final String [] displayValues = new String[NUMBER_OF_VALUES];
-        for(int i = 0; i < NUMBER_OF_VALUES; i++){
-            displayValues[i] = String.valueOf(PICKER_RANGE * (i+1));
-        }
-        measuredFlowPicker.setMinValue(0);
-        measuredFlowPicker.setMaxValue(displayValues.length -1);
-        measuredFlowPicker.setValue(displayValues.length/2);
+        NumberPicker.Formatter format = new NumberPicker.Formatter() {
+            @Override
+            public String format(int value) {
+                int temp = value*10;
+                return ""+temp;
+            }
+        };
+        int MAX = 70;
+        int MIN = 0;
+        measuredFlowPicker.setFormatter(format);
+        measuredFlowPicker.setMinValue(MIN);
+        measuredFlowPicker.setMaxValue(MAX);
+        measuredFlowPicker.setValue((MAX-MIN)/2);
 
         //Setting Navigation
         //Back Arrow
