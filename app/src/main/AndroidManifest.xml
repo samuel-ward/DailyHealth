@@ -13,7 +13,8 @@
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".RecordNew"></activity>
+        <activity android:name=".SupportIntro"></activity>
+        <activity android:name=".RecordNew" />
         <activity android:name=".RecordIntro" />
         <activity android:name=".MeasurementResult" />
         <activity android:name=".MeasurementPage7" />
@@ -39,8 +40,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".HomePageActivity">
-        </activity>
+        <activity android:name=".HomePageActivity"></activity>
     </application>
 
 </manifest>

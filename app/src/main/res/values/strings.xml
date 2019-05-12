@@ -217,4 +217,12 @@
     <string name="record_details">Details:</string>
     <string name="record_save">Save Health Record</string>
 
+    <!-- Support -->
+    <string name="support_choose">Choose a Service</string>
+    <string name="support_blurb">Use our online chat to give instant medical advice, or use our hot-line to call our doctor direct</string>
+    <string name="support_online_service_title">Online Service</string>
+    <string name="support_online_service_write">Write a message</string>
+    <string name="support_hotline_title">Hot-Line</string>
+    <string name="support_hotline_calling">Calling&#8230;</string>
+
 </resources>
