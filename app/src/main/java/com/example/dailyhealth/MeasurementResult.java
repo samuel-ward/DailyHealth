@@ -1,7 +1,11 @@
 package com.example.dailyhealth;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
 
 public class MeasurementResult extends AppCompatActivity {
 
@@ -9,5 +13,23 @@ public class MeasurementResult extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_measurement_result);
+
+        //Setting Views
+        final ImageView backArrowButton = findViewById(R.id.icon_back_arrow);
+
+        //Setting Navigation
+        //Back Arrow
+        backArrowButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                backArrowButton.setColorFilter(R.color.colorDBlue);
+                try{
+                    Intent i = new Intent(MeasurementResult.this, HomePageActivity.class);
+                    startActivity(i);
+                }catch(Exception e){
+
+                }
+            }
+        });
     }
 }
