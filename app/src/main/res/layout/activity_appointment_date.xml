@@ -45,6 +45,15 @@
             app:srcCompat="@drawable/ic_make_appiontments"
             android:tint="@color/colorLBlue"/>
 
+        <Button
+            android:id="@+id/btn_measurement_go_on"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignBottom="@id/lbl_appointment_date"
+            android:layout_alignParentEnd="true"
+            android:text="@string/next_stage_button"  />
+
     </RelativeLayout>
 
     <CalendarView

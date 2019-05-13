@@ -61,7 +61,7 @@ protected void onCreate(Bundle savedInstanceState) {
         makeAppointmentButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                        Intent i = new Intent(HomePageActivity.this, AppointmentLocation.class);
+                        Intent i = new Intent(HomePageActivity.this, AppointmentDate.class);
                         startActivity(i);
                 }
         });
