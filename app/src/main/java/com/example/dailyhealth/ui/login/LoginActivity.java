@@ -27,10 +27,12 @@ import android.widget.Toast;
 import com.example.dailyhealth.HomePageActivity;
 import com.example.dailyhealth.R;
 import com.example.dailyhealth.RegisterIntro;
+import com.example.dailyhealth.User;
 import com.example.dailyhealth.ui.login.LoginViewModel;
 import com.example.dailyhealth.ui.login.LoginViewModelFactory;
 
 public class LoginActivity extends AppCompatActivity {
+    User user;
 
     private LoginViewModel loginViewModel;
 
@@ -68,6 +70,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 try{
                     Intent i = new Intent(LoginActivity.this, RegisterIntro.class);
+                    i.putExtra("User",user.getInstance());
                     startActivity(i);
                 } catch(Exception e){
                 }

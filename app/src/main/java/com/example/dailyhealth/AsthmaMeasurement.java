@@ -1,5 +1,8 @@
 package com.example.dailyhealth;
 
+import android.content.Context;
+import android.widget.Toast;
+
 import java.io.Serializable;
 import java.lang.Math;
 
@@ -14,9 +17,10 @@ public class AsthmaMeasurement implements Serializable {
     private int heartRate;
     private int exhaustion;
     //Gathered from user details
-    private int age;
+    private User user;
+    /*private int age;
     private int height;
-    private boolean sex;
+    private boolean sex;*/
     //Calculations
     private boolean[] emergency;
 
@@ -31,9 +35,10 @@ public class AsthmaMeasurement implements Serializable {
         heartRate = 0;
         exhaustion = 0;
         emergency = new boolean[6];
+        user.getInstance();
     }
 
-    //Set
+    //Set/Get
     void setMeasuredPeakFlow(int reading){measuredPeakFlow=reading;}
     void setPredictedPeakFlow(int reading){predictedPeakFlow=reading;}
     void setSentenceFormation(int reading){sentenceFormation=reading;}
@@ -41,8 +46,6 @@ public class AsthmaMeasurement implements Serializable {
     void setRespiratoryEffort(int reading){respiratoryEffort=reading;}
     void setHeartRate(int reading){heartRate=reading;}
     void setExhaustion(int reading){exhaustion=reading;}
-
-    //Get
     int getMeasuredPeakFlow(){return measuredPeakFlow;}
     int getPredictedPeakFlow(){return predictedPeakFlow;}
     int getSentenceFormation(){return sentenceFormation;}
@@ -73,6 +76,13 @@ public class AsthmaMeasurement implements Serializable {
         for(int i = 0; i < emergency.length; i++){emergency[i]=false;}
 
         //Flow% -- [0]
+        if(predictedPeakFlow == 0){
+            try{
+                calculatePredictedPeakFlow(user.getSex(),user.getAge(),user.getHeight());
+            } catch (Exception e){
+
+            }
+        }
         if(calculateFlowPercentage(measuredPeakFlow,predictedPeakFlow) > 70){
             severityTotal+=0;
         } else if(calculateFlowPercentage(measuredPeakFlow,predictedPeakFlow) > 50 && calculateFlowPercentage(measuredPeakFlow,predictedPeakFlow) <= 70){

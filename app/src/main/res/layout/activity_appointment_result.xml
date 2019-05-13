@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AppointmentResult">
+
+    <!-- Header -->
+    <RelativeLayout
+        android:id="@+id/header_appointment_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/gradient_dark">
+
+        <TextView
+            android:id="@+id/lbl_appointment_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingTop="100dp"
+            android:text="@string/appointment_result_t"
+            android:textAlignment="gravity"
+            android:textSize="35sp"
+            android:textColor="@color/colorWBlue"/>
+
+        <ImageView
+            android:id="@+id/icon_back_arrow"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="76dp"
+            android:contentDescription="@string/back_arrow"
+            app:srcCompat="@drawable/ic_arrow_back_black_24dp"
+            android:tint="@color/colorWBlue" />
+
+        <ImageView
+            android:id="@+id/icon_appointment"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentEnd="true"
+            android:contentDescription="@string/support_hotline_title"
+            app:srcCompat="@drawable/ic_make_appiontments"
+            android:tint="@color/colorLBlue"/>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/icon_check"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center_horizontal"
+        android:contentDescription="@string/appointment_complete"
+        app:srcCompat="@drawable/ic_check_circle_black_24dp"
+        android:tint="@color/colorWBlue"/>
+
+    <TextView
+        android:id="@+id/lbl_appointment_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/appointment_result_s"
+        android:textAlignment="gravity"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textSize="30sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="20dp">
+
+        <TextView
+            android:id="@+id/lbl_appointment_date_t"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:textAllCaps="true"
+            android:text="@string/appointment_result_date"/>
+
+        <TextView
+            android:id="@+id/lbl_appointment_date"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:text="@string/appointment_result_date"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="20dp">
+
+        <TextView
+            android:id="@+id/lbl_appointment_time_t"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:textAllCaps="true"
+            android:text="@string/appointment_result_time"/>
+
+        <TextView
+            android:id="@+id/lbl_appointment_time"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:text="@string/appointment_result_time"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="20dp">
+
+        <TextView
+            android:id="@+id/lbl_appointment_location_t"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:textAllCaps="true"
+            android:text="@string/appointment_result_location"/>
+
+        <TextView
+            android:id="@+id/lbl_appointment_location"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:text="@string/appointment_result_location"/>
+
+    </LinearLayout>
+
+</LinearLayout>

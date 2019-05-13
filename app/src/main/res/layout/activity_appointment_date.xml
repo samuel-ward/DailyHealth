@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AppointmentDate">
+
+    <!-- Header -->
+    <RelativeLayout
+        android:id="@+id/header_appointment_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/gradient_dark">
+
+        <TextView
+            android:id="@+id/lbl_appointment_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingTop="100dp"
+            android:text="@string/appointment_date_t"
+            android:textAlignment="gravity"
+            android:textSize="35sp"
+            android:textColor="@color/colorWBlue"/>
+
+        <ImageView
+            android:id="@+id/icon_back_arrow"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="76dp"
+            android:contentDescription="@string/back_arrow"
+            app:srcCompat="@drawable/ic_arrow_back_black_24dp"
+            android:tint="@color/colorWBlue" />
+
+        <ImageView
+            android:id="@+id/icon_appoitnment"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentEnd="true"
+            android:contentDescription="@string/support_hotline_title"
+            app:srcCompat="@drawable/ic_make_appiontments"
+            android:tint="@color/colorLBlue"/>
+
+    </RelativeLayout>
+
+    <CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/CalenderViewCustom"
+        android:background="@drawable/gradient_dark"
+        android:dateTextAppearance="@style/CalenderViewDateCustomText"
+        android:weekDayTextAppearance="@style/CalenderViewWeekCustomText"/>
+
+    <Spinner
+        android:id="@+id/spinner_location2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/lbl_appointment_date_t1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:text="@string/appointment_date_morning_t"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_marginStart="50dp">
+
+            <ImageView
+                android:id="@+id/btn_opt1"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true"
+                android:src="@drawable/ic_check_circle_black_24dp"
+                android:contentDescription="@string/option"
+                android:tint="@color/colorLBlue"/>
+
+            <TextView
+                android:id="@+id/lbl_appointment_date_opt1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:text="@string/appointment_date_morning_opt1"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_marginStart="50dp">
+
+            <ImageView
+                android:id="@+id/btn_opt2"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true"
+                android:src="@drawable/ic_check_circle_black_24dp"
+                android:contentDescription="@string/option"
+                android:tint="@color/colorLBlue"/>
+
+            <TextView
+                android:id="@+id/lbl_appointment_date_opt2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:text="@string/appointment_date_morning_opt2"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_marginStart="50dp">
+
+            <ImageView
+                android:id="@+id/btn_opt3"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true"
+                android:src="@drawable/ic_check_circle_black_24dp"
+                android:contentDescription="@string/option"
+                android:tint="@color/colorLBlue"/>
+
+            <TextView
+                android:id="@+id/lbl_appointment_date_opt3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:text="@string/appointment_date_morning_opt3"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/lbl_appointment_date_t2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:text="@string/appointment_date_afternoon_t"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_marginStart="50dp">
+
+            <ImageView
+                android:id="@+id/btn_opt4"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true"
+                android:src="@drawable/ic_check_circle_black_24dp"
+                android:contentDescription="@string/option"
+                android:tint="@color/colorLBlue"/>
+
+            <TextView
+                android:id="@+id/lbl_appointment_date_opt4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:text="@string/appointment_date_afternoon_opt1"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_marginStart="50dp">
+
+            <ImageView
+                android:id="@+id/btn_opt5"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true"
+                android:src="@drawable/ic_check_circle_black_24dp"
+                android:contentDescription="@string/option"
+                android:tint="@color/colorLBlue"/>
+
+            <TextView
+                android:id="@+id/lbl_appointment_date_opt5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:text="@string/appointment_date_afternoon_opt2"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_marginStart="50dp">
+
+            <ImageView
+                android:id="@+id/btn_opt6"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true"
+                android:src="@drawable/ic_check_circle_black_24dp"
+                android:contentDescription="@string/option"
+                android:tint="@color/colorLBlue"/>
+
+            <TextView
+                android:id="@+id/lbl_appointment_date_opt6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:text="@string/appointment_date_afternoon_opt3"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

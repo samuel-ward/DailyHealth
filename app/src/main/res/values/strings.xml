@@ -244,6 +244,25 @@
     <string name="record_details">Details:</string>
     <string name="record_save">Save Health Record</string>
 
+    <!-- Appointment -->
+    <!-- Date/Time -->
+    <string name="appointment_date_t">Date and Time</string>
+    <string name="appointment_date_morning_t">Morning</string>
+    <string name="appointment_date_morning_opt1">9AM - 10AM</string>
+    <string name="appointment_date_morning_opt2">10AM - 11AM</string>
+    <string name="appointment_date_morning_opt3">11AM - 12PM</string>
+    <string name="appointment_date_afternoon_t">Afternoon</string>
+    <string name="appointment_date_afternoon_opt1">1PM - 2PM</string>
+    <string name="appointment_date_afternoon_opt2">2PM - 3PM</string>
+    <string name="appointment_date_afternoon_opt3">3PM - 4PM</string>
+    <!-- Output -->
+    <string name="appointment_result_t">Your Reservation</string>
+    <string name="appointment_result_s">Your Booking Details:</string>
+    <string name="appointment_result_date">Date:</string>
+    <string name="appointment_result_time">Time:</string>
+    <string name="appointment_result_location">Location:</string>
+    <string name="appointment_complete">Complete</string>
+
     <!-- Support -->
     <string name="support_choose">Choose a Service</string>
     <string name="support_blurb">Use our online chat to give instant medical advice, or use our hot-line to call our doctor direct</string>
@@ -253,5 +272,6 @@
     <string name="support_hotline_calling">Calling&#8230;</string>
     <string name="support_hotline_dotor">Doctor</string>
     <string name="support_chat_bubble">Chat Bubble</string>
+    <string name="title_activity_appointment_location">Map</string>
 
 </resources>
