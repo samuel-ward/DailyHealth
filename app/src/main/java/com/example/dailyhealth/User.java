@@ -11,7 +11,7 @@ public class User implements Serializable {
     private int age;
     private int weight;
     private int height;
-    private static User user = null;
+    private static User instance;
     private Boolean registered;
 
     //Singleton
@@ -29,9 +29,9 @@ public class User implements Serializable {
 
     //Public
     public static User getInstance(){
-        if(user == null)
-            user = new User();
-        return user;
+        if(instance == null)
+            instance = new User();
+        return instance;
     }
 
     // Set/Get

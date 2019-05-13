@@ -23,7 +23,7 @@ public class MeasurementIntro extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(MeasurementIntro.this, MeasurementPage1.class);
-                startActivity(i);
+                startActivityForResult(i,1);
             }
         });
 
@@ -34,5 +34,12 @@ public class MeasurementIntro extends AppCompatActivity {
                 finish();
             }
         });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if(resultCode==2){
+            finish();
+        }
     }
 }

@@ -40,16 +40,26 @@ public class AppointmentResult extends AppCompatActivity {
         backArrowButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                backArrowButton.setColorFilter(R.color.colorDBlue);
-                Intent i = new Intent(AppointmentResult.this, HomePageActivity.class);
-                startActivity(i);
+                setResult(2);
+                finish();
             }
         });
     }
 
     @Override
     public void onBackPressed() {
-        Intent i = new Intent(AppointmentResult.this, HomePageActivity.class);
-        startActivity(i);
+        setResult(2);
+        finish();
+    }
+
+    @Override
+    protected void onStop() {
+        setResult(2);
+        super.onStop();
+    }
+    @Override
+    protected void onDestroy() {
+        setResult(2);
+        super.onDestroy();
     }
 }

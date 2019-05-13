@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.NumberPicker;
+import android.widget.Toast;
 
 public class RegisterPage4 extends AppCompatActivity {
 
@@ -56,7 +57,9 @@ public class RegisterPage4 extends AppCompatActivity {
             public void onClick(View v) {
                 try{
                     user.setHeight(heightPicker.getValue());
+                    user.setRegistered(true);
                     Intent i = new Intent(RegisterPage4.this, HomePageActivity.class);
+                    i.putExtra("User", user);
                     startActivity(i);
                 }catch(Exception e){
 

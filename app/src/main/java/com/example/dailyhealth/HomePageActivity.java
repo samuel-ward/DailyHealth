@@ -4,8 +4,15 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.example.dailyhealth.ui.login.LoginActivity;
 
 public class HomePageActivity extends AppCompatActivity {
+
+        private User user;
+        private Boolean registered;
 
 @Override
 protected void onCreate(Bundle savedInstanceState) {
@@ -19,8 +26,26 @@ protected void onCreate(Bundle savedInstanceState) {
         final View healthRecordButton = findViewById(R.id.container_homepage_healthrecord);
         final View makeAppointmentButton = findViewById(R.id.container_homepage_appointment);
         final View directSupportButton = findViewById(R.id.container_homepage_service);
+        final TextView signinText = findViewById(R.id.lbl_login);
+
+        //Setting Variables
+        registered = false;
+        try{
+                user = (User)getIntent().getSerializableExtra("User");
+                if(user.getRegistered()){signinText.setVisibility(View.INVISIBLE);registered=user.getRegistered();}
+        } catch (Exception e){
+
+        }
 
         //Setting Navigation Buttons
+        //Login
+        signinText.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                        Intent i = new Intent(HomePageActivity.this, LoginActivity.class);
+                        startActivity(i);
+                }
+        });
         //Disease
         diseaseIntroButton.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -43,8 +68,12 @@ protected void onCreate(Bundle savedInstanceState) {
         measurementButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                        Intent i = new Intent(HomePageActivity.this, MeasurementIntro.class);
-                        startActivity(i);
+                        if(registered){
+                                Intent i = new Intent(HomePageActivity.this, MeasurementIntro.class);
+                                startActivity(i);
+                        } else {
+                                Toast.makeText(HomePageActivity.this, "Please login",Toast.LENGTH_LONG).show();
+                        }
                 }
         });
 
@@ -52,8 +81,12 @@ protected void onCreate(Bundle savedInstanceState) {
         healthRecordButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                        Intent i = new Intent(HomePageActivity.this, RecordIntro.class);
-                        startActivity(i);
+                        if(registered){
+                                Intent i = new Intent(HomePageActivity.this, RecordIntro.class);
+                                startActivity(i);
+                        } else {
+                                Toast.makeText(HomePageActivity.this, "Please login",Toast.LENGTH_LONG).show();
+                        }
                 }
         });
 
@@ -61,8 +94,12 @@ protected void onCreate(Bundle savedInstanceState) {
         makeAppointmentButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                        Intent i = new Intent(HomePageActivity.this, AppointmentDate.class);
-                        startActivity(i);
+                        if(registered){
+                                Intent i = new Intent(HomePageActivity.this, AppointmentDate.class);
+                                startActivity(i);
+                        } else {
+                                Toast.makeText(HomePageActivity.this, "Please login",Toast.LENGTH_LONG).show();
+                        }
                 }
         });
 

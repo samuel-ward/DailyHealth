@@ -74,8 +74,8 @@ public class MeasurementResult extends AppCompatActivity {
             public void onClick(View v) {
                 backArrowButton.setColorFilter(R.color.colorDBlue);
                 try{
-                    Intent i = new Intent(MeasurementResult.this, HomePageActivity.class);
-                    startActivity(i);
+                    setResult(2);
+                    finish();
                 }catch(Exception e){
 
                 }
@@ -133,7 +133,18 @@ public class MeasurementResult extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        Intent i = new Intent(MeasurementResult.this, HomePageActivity.class);
-        startActivity(i);
+        setResult(2);
+        finish();
+    }
+
+    @Override
+    protected void onStop() {
+        setResult(2);
+        super.onStop();
+    }
+    @Override
+    protected void onDestroy() {
+        setResult(2);
+        super.onDestroy();
     }
 }

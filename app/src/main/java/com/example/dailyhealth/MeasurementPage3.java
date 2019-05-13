@@ -85,18 +85,36 @@ public class MeasurementPage3 extends AppCompatActivity {
                 try{
 
                     AsthmaMeasurement measurement;
-                    Toast.makeText(MeasurementPage3.this, "You have chosen " + sentenceFormation, Toast.LENGTH_LONG).show();
+                    //Toast.makeText(MeasurementPage3.this, "You have chosen " + sentenceFormation, Toast.LENGTH_LONG).show();
                     measurement = (AsthmaMeasurement) getIntent().getSerializableExtra("Measurement");
                     measurement.setSentenceFormation(sentenceFormation);
 
                     Intent i = new Intent(MeasurementPage3.this, MeasurementPage4.class);
                     i.putExtra("Measurement", measurement);
-                    startActivity(i);
+                    startActivityForResult(i,1);
 
                 }catch(Exception e){
-                    Toast.makeText(MeasurementPage3.this, "Please choose an option", Toast.LENGTH_LONG).show();
+                    //Toast.makeText(MeasurementPage3.this, "Please choose an option", Toast.LENGTH_LONG).show();
                 }
             }
         });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if(resultCode==2){
+            finish();
+        }
+    }
+
+    @Override
+    protected void onStop() {
+        setResult(2);
+        super.onStop();
+    }
+    @Override
+    protected void onDestroy() {
+        setResult(2);
+        super.onDestroy();
     }
 }

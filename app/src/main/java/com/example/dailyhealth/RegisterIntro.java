@@ -34,9 +34,10 @@ public class RegisterIntro extends AppCompatActivity {
         final EditText passwordInput = findViewById(R.id.et_register_password);
 
         //Set Variables
+        user = user.getInstance();
         progress = new Boolean[3];
-        for (Boolean temp:progress) {
-            temp = false;
+        for(int i = 0; i < progress.length; i++){
+            progress[i] = false;
         }
 
         //Text Change Events
@@ -56,6 +57,7 @@ public class RegisterIntro extends AppCompatActivity {
             public void afterTextChanged(Editable s) {
                 username = usernameInput.getText().toString();
                 progress[0] = true;
+                //Toast.makeText(RegisterIntro.this, "Username: "+ username, Toast.LENGTH_SHORT).show();
             }
         });
         //Email Field
@@ -75,6 +77,9 @@ public class RegisterIntro extends AppCompatActivity {
                 if(isValidEmail(emailInput.getText())){
                     email = emailInput.getText().toString();
                     progress[1] = true;
+                    //Toast.makeText(RegisterIntro.this, "Email: "+ email, Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(RegisterIntro.this,"Email address provided is invalid, please select a different one", Toast.LENGTH_LONG).show();
                 }
             }
         });
@@ -94,6 +99,7 @@ public class RegisterIntro extends AppCompatActivity {
             public void afterTextChanged(Editable s) {
                 password = passwordInput.getText().toString();
                 progress[2] = true;
+                //Toast.makeText(RegisterIntro.this, "Password: "+ password, Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -114,7 +120,6 @@ public class RegisterIntro extends AppCompatActivity {
                 try{
 
                     if(progress[0] && progress[1] && progress[2]){
-                        user.getInstance();
                         user.setUsername(username);
                         user.setEmail(email);
                         user.setPassword(password);
@@ -123,6 +128,7 @@ public class RegisterIntro extends AppCompatActivity {
                         startActivity(i);
                     }
                 }catch(Exception e){
+                    //Toast.makeText(RegisterIntro.this, "Something went wrong: " +e.getMessage(), Toast.LENGTH_SHORT).show();
 
                 }
             }

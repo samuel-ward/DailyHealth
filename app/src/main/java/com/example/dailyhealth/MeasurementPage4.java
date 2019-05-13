@@ -55,17 +55,35 @@ public class MeasurementPage4 extends AppCompatActivity {
 
                     AsthmaMeasurement measurement;
                     int chosenValue = respiratoryRatePicker.getValue();
-                    Toast.makeText(MeasurementPage4.this, "You have chosen " + chosenValue, Toast.LENGTH_LONG).show();
+                    //Toast.makeText(MeasurementPage4.this, "You have chosen " + chosenValue, Toast.LENGTH_LONG).show();
                     measurement = (AsthmaMeasurement) getIntent().getSerializableExtra("Measurement");
                     measurement.setRespiratoryRate(chosenValue);
 
                     Intent i = new Intent(MeasurementPage4.this, MeasurementPage5.class);
                     i.putExtra("Measurement", measurement);
-                    startActivity(i);
+                    startActivityForResult(i,1);
                 }catch(Exception e){
 
                 }
             }
         });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if(resultCode==2){
+            finish();
+        }
+    }
+
+    @Override
+    protected void onStop() {
+        setResult(2);
+        super.onStop();
+    }
+    @Override
+    protected void onDestroy() {
+        setResult(2);
+        super.onDestroy();
     }
 }

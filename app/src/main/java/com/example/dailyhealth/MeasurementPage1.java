@@ -53,18 +53,36 @@ public class MeasurementPage1 extends AppCompatActivity {
                 try{
 
                     int chosenValue = measuredFlowPicker.getValue();
-                    Toast.makeText(MeasurementPage1.this, "You have chosen " + chosenValue, Toast.LENGTH_LONG).show();
+                    //Toast.makeText(MeasurementPage1.this, "You have chosen " + chosenValue, Toast.LENGTH_LONG).show();
                     AsthmaMeasurement measurement = new AsthmaMeasurement();
                     measurement.setMeasuredPeakFlow(chosenValue);
 
                     Intent i = new Intent(MeasurementPage1.this, MeasurementPage2.class);
                     i.putExtra("Measurement", measurement);
-                    startActivity(i);
+                    startActivityForResult(i,1);
 
                 }catch(Exception e){
 
                 }
             }
         });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if(resultCode==2){
+            finish();
+        }
+    }
+
+    @Override
+    protected void onStop() {
+        setResult(2);
+        super.onStop();
+    }
+    @Override
+    protected void onDestroy() {
+        setResult(2);
+        super.onDestroy();
     }
 }

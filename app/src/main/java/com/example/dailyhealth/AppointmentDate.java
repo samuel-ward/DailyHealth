@@ -179,12 +179,19 @@ public class AppointmentDate extends AppCompatActivity {
                     i.putExtra("Date", date);
                     i.putExtra("Location",location);
                     i.putExtra("Time",time);
-                    startActivity(i);
+                    startActivityForResult(i,1);
 
                 }catch(Exception e){
                     Toast.makeText(AppointmentDate.this, "Please select a time, date, and location", Toast.LENGTH_LONG).show();
                 }
             }
         });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if(resultCode==2){
+            finish();
+        }
     }
 }
