@@ -12,6 +12,7 @@ public class User implements Serializable {
     private int weight;
     private int height;
     private static User user = null;
+    private Boolean registered;
 
     //Singleton
     private User(){
@@ -23,6 +24,7 @@ public class User implements Serializable {
         age = 0;
         weight = 0;
         height = 0;
+        registered = false;
     }
 
     //Public
@@ -40,6 +42,7 @@ public class User implements Serializable {
     void setAge(int reading){age=reading;}
     void setWeight(int reading){weight=reading;}
     void setHeight(int reading){height=reading;}
+    void setRegistered(Boolean reading){registered=reading;}
     String getUsername(){return username;}
     String getEmail(){return email;}
     String getPassword(){return password;}
@@ -47,4 +50,5 @@ public class User implements Serializable {
     int getAge(){return age;}
     int getWeight(){return weight;}
     int getHeight(){return height;}
+    Boolean getRegistered(){return registered;}
 }

@@ -46,4 +46,10 @@ public class AppointmentResult extends AppCompatActivity {
             }
         });
     }
+
+    @Override
+    public void onBackPressed() {
+        Intent i = new Intent(AppointmentResult.this, HomePageActivity.class);
+        startActivity(i);
+    }
 }

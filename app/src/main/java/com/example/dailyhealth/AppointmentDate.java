@@ -52,7 +52,7 @@ public class AppointmentDate extends AppCompatActivity {
         final Button forwardButton = findViewById(R.id.btn_measurement_go_on);
 
         //CalendarView
-        dateFormat = new SimpleDateFormat("dd-mm-yyy", Locale.getDefault());
+        dateFormat = new SimpleDateFormat("dd-MM-yyy", Locale.getDefault());
         calendarView.setDate(System.currentTimeMillis(),false,true);
         calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @Override
@@ -62,16 +62,20 @@ public class AppointmentDate extends AppCompatActivity {
         });
 
         //Location Spinner
-        ArrayAdapter<CharSequence> styleAdapter = ArrayAdapter.createFromResource(this, R.array.locations, R.layout.support_simple_spinner_dropdown_item);
+        final ArrayAdapter<CharSequence> styleAdapter = ArrayAdapter.createFromResource(this, R.array.locations, R.layout.support_simple_spinner_dropdown_item);
         styleAdapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
         spinnerLocations.setAdapter(styleAdapter);
-        spinnerLocations.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        spinnerLocations.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 locationIndex = position;
             }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
         });
-        location = styleAdapter.getItem(locationIndex).toString();
 
         //Option Select
         //timeOption = 0;
@@ -170,6 +174,7 @@ public class AppointmentDate extends AppCompatActivity {
             public void onClick(View v) {
                 try{
 
+                    location = styleAdapter.getItem(locationIndex).toString();
                     Intent i = new Intent(AppointmentDate.this, AppointmentResult.class);
                     i.putExtra("Date", date);
                     i.putExtra("Location",location);

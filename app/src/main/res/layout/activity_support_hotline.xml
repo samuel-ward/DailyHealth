@@ -42,7 +42,8 @@
             android:layout_height="100dp"
             android:layout_alignParentEnd="true"
             android:contentDescription="@string/support_hotline_title"
-            app:srcCompat="@drawable/ic_service_hotline_button"/>
+            app:srcCompat="@drawable/ic_service_hotline_button"
+            android:tint="@color/colorLBlue"/>
 
     </RelativeLayout>
 

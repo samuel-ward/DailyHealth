@@ -91,7 +91,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lbl_support_blurb"
         app:layout_constraintVertical_bias="0.088"
-        app:srcCompat="@drawable/ic_service_online_button" />
+        app:srcCompat="@drawable/ic_service_online_button"
+        android:tint="@color/colorLBlue"/>
 
     <ImageView
         android:id="@+id/img_hotline"
@@ -108,6 +109,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lbl_support_blurb"
         app:layout_constraintVertical_bias="0.088"
-        app:srcCompat="@drawable/ic_service_hotline_button" />
+        app:srcCompat="@drawable/ic_service_hotline_button"
+        android:tint="@color/colorLBlue"/>
 
 </android.support.constraint.ConstraintLayout>
