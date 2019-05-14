@@ -116,19 +116,24 @@ public class RegisterIntro extends AppCompatActivity {
         signupButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                try{
 
-                    if(progress[0] && progress[1] && progress[2]){
-                        user.setUsername(username);
-                        user.setEmail(email);
-                        user.setPassword(password);
-                        Intent i = new Intent(RegisterIntro.this, RegisterPage1.class);
-                        i.putExtra("User",user);
-                        startActivity(i);
+                if(isValidEmail(email)){
+                    try{
+
+                        if(progress[0] && progress[1] && progress[2]){
+                            user.setUsername(username);
+                            user.setEmail(email);
+                            user.setPassword(password);
+                            Intent i = new Intent(RegisterIntro.this, RegisterPage1.class);
+                            i.putExtra("User",user);
+                            startActivity(i);
+                        }
+                    }catch(Exception e){
+                        //Toast.makeText(RegisterIntro.this, "Something went wrong: " +e.getMessage(), Toast.LENGTH_SHORT).show();
+
                     }
-                }catch(Exception e){
-                    //Toast.makeText(RegisterIntro.this, "Something went wrong: " +e.getMessage(), Toast.LENGTH_SHORT).show();
-
+                } else {
+                    Toast.makeText(RegisterIntro.this, "Please provide a valid email", Toast.LENGTH_LONG).show();
                 }
             }
         });

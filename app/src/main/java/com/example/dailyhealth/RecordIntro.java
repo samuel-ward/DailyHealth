@@ -74,6 +74,29 @@ public class RecordIntro extends AppCompatActivity {
         final Button newRecordButton = findViewById(R.id.btn_add_record);
         recordList = findViewById(R.id.lv_records);
 
+        //Setting Navigation
+        //Back Arrow
+        backArrowButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                backArrowButton.setColorFilter(R.color.colorDBlue);
+                finish();
+            }
+        });
+
+        //Add New
+        newRecordButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(RecordIntro.this, RecordNew.class);
+                startActivity(i);
+            }
+        });
+    }
+
+    @Override
+    protected void onResume(){
+
         //Setting Variables
         SharedPreferences mPrefs=getSharedPreferences(getApplicationInfo().name, Context.MODE_PRIVATE);
 
@@ -93,23 +116,6 @@ public class RecordIntro extends AppCompatActivity {
             }
         }
 
-        //Setting Navigation
-        //Back Arrow
-        backArrowButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                backArrowButton.setColorFilter(R.color.colorDBlue);
-                finish();
-            }
-        });
-
-        //Add New
-        newRecordButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(RecordIntro.this, RecordNew.class);
-                startActivity(i);
-            }
-        });
+        super.onResume();
     }
 }
