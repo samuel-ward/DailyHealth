@@ -97,6 +97,8 @@ public class RecordIntro extends AppCompatActivity {
     @Override
     protected void onResume(){
 
+        super.onResume();
+
         //Setting Variables
         SharedPreferences mPrefs=getSharedPreferences(getApplicationInfo().name, Context.MODE_PRIVATE);
 
@@ -115,7 +117,5 @@ public class RecordIntro extends AppCompatActivity {
                 Toast.makeText(RecordIntro.this,e.getMessage(),Toast.LENGTH_LONG).show();
             }
         }
-
-        super.onResume();
     }
 }

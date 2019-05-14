@@ -95,6 +95,7 @@ public class LoginActivity extends AppCompatActivity {
         });
 
         //Login Button
+        //server deatils:: Hostname: 127.0.0.1 || Port: 3306; username: root || password: 158383
         loginViewModel.getLoginFormState().observe(this, new Observer<LoginFormState>() {
             @Override
             public void onChanged(@Nullable LoginFormState loginFormState) {
