@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,6 +25,7 @@ public class MeasurementResult extends AppCompatActivity {
         final Button severeButton = findViewById(R.id.btn_severity3);
         final Button emergencyButton = findViewById(R.id.btn_severity4);
         final TextView actionPlan = findViewById(R.id.tv_severity);
+        final ScrollView severityText = findViewById(R.id.sv_severity);
 
         //Setting Buttons
         mildButton.setOnClickListener(new View.OnClickListener() {
@@ -85,6 +87,7 @@ public class MeasurementResult extends AppCompatActivity {
         //Calculations
         try{
             measurement = (AsthmaMeasurement)getIntent().getSerializableExtra("Measurement");
+            //Toast.makeText(MeasurementResult.this, measurement.user.getUsername(), Toast.LENGTH_LONG).show();
             int calculation = measurement.calculateSeverity(measurement.calculateSeverityTotal());
 
             switch (calculation){
@@ -96,6 +99,7 @@ public class MeasurementResult extends AppCompatActivity {
                     severeButton.setBackgroundColor(getResources().getColor(R.color.colorSevere));
                     emergencyButton.setBackgroundColor(getResources().getColor(R.color.colorEmergency));
                     actionPlan.setText(R.string.severity_mild);
+                    severityText.setBackgroundColor(getResources().getColor(R.color.colorMild));
                     break;
                 case 1:
                     //Moderate
@@ -105,6 +109,7 @@ public class MeasurementResult extends AppCompatActivity {
                     severeButton.setBackgroundColor(getResources().getColor(R.color.colorSevere));
                     emergencyButton.setBackgroundColor(getResources().getColor(R.color.colorEmergency));
                     actionPlan.setText(R.string.severity_moderate);
+                    severityText.setBackgroundColor(getResources().getColor(R.color.colorModerate));
                     break;
                 case 2:
                     //Severe
@@ -114,6 +119,7 @@ public class MeasurementResult extends AppCompatActivity {
                     severeButton.setBackgroundColor(getResources().getColor(R.color.colorDSevere));
                     emergencyButton.setBackgroundColor(getResources().getColor(R.color.colorEmergency));
                     actionPlan.setText(R.string.severity_severe);
+                    severityText.setBackgroundColor(getResources().getColor(R.color.colorSevere));
                     break;
                 case 3:
                     //Emergency
@@ -123,6 +129,7 @@ public class MeasurementResult extends AppCompatActivity {
                     severeButton.setBackgroundColor(getResources().getColor(R.color.colorSevere));
                     emergencyButton.setBackgroundColor(getResources().getColor(R.color.colorDEmergency));
                     actionPlan.setText(R.string.severity_emergency);
+                    severityText.setBackgroundColor(getResources().getColor(R.color.colorEmergency));
                     break;
 
             }

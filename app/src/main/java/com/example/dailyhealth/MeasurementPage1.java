@@ -52,7 +52,7 @@ public class MeasurementPage1 extends AppCompatActivity {
             public void onClick(View v) {
                 try{
 
-                    int chosenValue = measuredFlowPicker.getValue();
+                    int chosenValue = measuredFlowPicker.getValue()*10;
                     //Toast.makeText(MeasurementPage1.this, "You have chosen " + chosenValue, Toast.LENGTH_LONG).show();
                     AsthmaMeasurement measurement = new AsthmaMeasurement();
                     measurement.setMeasuredPeakFlow(chosenValue);

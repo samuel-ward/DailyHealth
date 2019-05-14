@@ -17,7 +17,7 @@ public class AsthmaMeasurement implements Serializable {
     private int heartRate;
     private int exhaustion;
     //Gathered from user details
-    private User user;
+    public User user;
     /*private int age;
     private int height;
     private boolean sex;*/
@@ -35,7 +35,7 @@ public class AsthmaMeasurement implements Serializable {
         heartRate = 0;
         exhaustion = 0;
         emergency = new boolean[6];
-        user.getInstance();
+        user = user.getInstance();
     }
 
     //Set/Get

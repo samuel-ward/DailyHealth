@@ -53,7 +53,7 @@ public class MeasurementPage2 extends AppCompatActivity {
                 try{
 
                     AsthmaMeasurement measurement;
-                    int chosenValue = predictedFlowPicker.getValue();
+                    int chosenValue = predictedFlowPicker.getValue()*10;
                     //Toast.makeText(MeasurementPage2.this, "You have chosen " + chosenValue, Toast.LENGTH_LONG).show();
                     measurement = (AsthmaMeasurement) getIntent().getSerializableExtra("Measurement");
                     measurement.setPredictedPeakFlow(chosenValue);

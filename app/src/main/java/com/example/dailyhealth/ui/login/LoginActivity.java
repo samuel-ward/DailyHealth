@@ -4,7 +4,9 @@ import android.Manifest;
 import android.app.Activity;
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
@@ -30,6 +32,7 @@ import com.example.dailyhealth.RegisterIntro;
 import com.example.dailyhealth.User;
 import com.example.dailyhealth.ui.login.LoginViewModel;
 import com.example.dailyhealth.ui.login.LoginViewModelFactory;
+import com.google.gson.Gson;
 
 public class LoginActivity extends AppCompatActivity {
     User user;
@@ -49,6 +52,20 @@ public class LoginActivity extends AppCompatActivity {
         final ProgressBar loadingProgressBar = findViewById(R.id.loading);
         final Button skipButton = findViewById(R.id.btn_skip);
         final Button registerButton = findViewById(R.id.btn_register);
+
+        //Shared Preferences
+        SharedPreferences mPrefs=getSharedPreferences(getApplicationInfo().name, Context.MODE_PRIVATE);
+
+        if(mPrefs.contains("User")){
+
+            Gson gson = new Gson();
+            String json = mPrefs.getString("User", null);
+            user = gson.fromJson(json, User.class);
+
+            Intent i = new Intent(LoginActivity.this, HomePageActivity.class);
+            i.putExtra("User", user);
+            startActivity(i);
+        }
 
         //Skip Button
         skipButton.setEnabled(true);

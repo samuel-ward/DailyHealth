@@ -110,6 +110,7 @@
         android:background="@android:color/darker_gray"/>
 
     <ScrollView
+        android:id="@+id/sv_severity"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="15dp"

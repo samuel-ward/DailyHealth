@@ -79,7 +79,6 @@ public class RegisterIntro extends AppCompatActivity {
                     progress[1] = true;
                     //Toast.makeText(RegisterIntro.this, "Email: "+ email, Toast.LENGTH_SHORT).show();
                 } else {
-                    Toast.makeText(RegisterIntro.this,"Email address provided is invalid, please select a different one", Toast.LENGTH_LONG).show();
                 }
             }
         });
