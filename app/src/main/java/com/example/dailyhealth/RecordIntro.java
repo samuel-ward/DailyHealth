@@ -30,6 +30,7 @@ import java.lang.reflect.Type;
 import java.net.URL;
 import java.net.URLConnection;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class RecordIntro extends AppCompatActivity {
@@ -37,6 +38,7 @@ public class RecordIntro extends AppCompatActivity {
     private ListView recordList;
     private RecordAdapter adapter;
     private ArrayList<Record> list;
+    private ArrayList<Record> list2;
 
     public class RecordAdapter extends ArrayAdapter<Record> {
         public RecordAdapter(Context context, ArrayList<Record> records) {
@@ -111,6 +113,7 @@ public class RecordIntro extends AppCompatActivity {
                         new TypeToken<List<Record>>(){}.getType());
 
                 //Populating List View
+                Collections.reverse(list);
                 RecordAdapter adapter = new RecordAdapter(this, list);
                 recordList.setAdapter(adapter);
             }catch(Exception e){

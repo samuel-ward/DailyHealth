@@ -1,6 +1,8 @@
 package com.example.dailyhealth;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -27,14 +29,23 @@ protected void onCreate(Bundle savedInstanceState) {
         final View makeAppointmentButton = findViewById(R.id.container_homepage_appointment);
         final View directSupportButton = findViewById(R.id.container_homepage_service);
         final TextView signinText = findViewById(R.id.lbl_login);
+        final TextView signoutText = findViewById(R.id.lbl_logout);
 
         //Setting Variables
         registered = false;
         try{
                 user = (User)getIntent().getSerializableExtra("User");
-                if(user.getRegistered()){signinText.setVisibility(View.INVISIBLE);registered=user.getRegistered();}
+                registered=user.getRegistered();
         } catch (Exception e){
 
+        }
+
+        if(registered){
+                signinText.setVisibility(View.INVISIBLE);
+                signoutText.setVisibility(View.VISIBLE);
+        } else {
+                signinText.setVisibility(View.VISIBLE);
+                signoutText.setVisibility(View.INVISIBLE);
         }
 
         //Setting Navigation Buttons
@@ -43,6 +54,18 @@ protected void onCreate(Bundle savedInstanceState) {
                 @Override
                 public void onClick(View v) {
                         Intent i = new Intent(HomePageActivity.this, LoginActivity.class);
+                        startActivity(i);
+                }
+        });
+        //Logout
+        signoutText.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                        Intent i = new Intent(HomePageActivity.this, LoginActivity.class);
+                        SharedPreferences mPrefs=getSharedPreferences(getApplicationInfo().name, Context.MODE_PRIVATE);
+                        SharedPreferences.Editor ed=mPrefs.edit();
+                        ed.clear().apply();
+                        user.setRegistered(false);
                         startActivity(i);
                 }
         });

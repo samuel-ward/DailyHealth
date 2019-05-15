@@ -60,7 +60,7 @@ public class RecordNew extends AppCompatActivity {
                 try{
 
                     date = "Date:\n"+dateFormat.format(new Date());
-                    title = "Title:"+recordTitle.getText().toString();
+                    title = "Title: "+recordTitle.getText().toString();
                     details = recordDetails.getText().toString();
                     record = new Record(date, title, details);
 
