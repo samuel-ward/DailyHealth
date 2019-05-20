@@ -1,38 +1,24 @@
 package com.example.dailyhealth.ui.login;
 
-import android.Manifest;
-import android.app.Activity;
-import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.StrictMode;
-import android.provider.MediaStore;
-import android.support.annotation.Nullable;
 import android.support.annotation.StringRes;
-import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.view.KeyEvent;
 import android.view.View;
-import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.dailyhealth.HomePageActivity;
 import com.example.dailyhealth.R;
 import com.example.dailyhealth.RegisterIntro;
 import com.example.dailyhealth.User;
-import com.example.dailyhealth.ui.login.LoginViewModel;
-import com.example.dailyhealth.ui.login.LoginViewModelFactory;
 import com.google.gson.Gson;
 
 public class LoginActivity extends AppCompatActivity {
@@ -205,7 +191,7 @@ public class LoginActivity extends AppCompatActivity {
         //Toast.makeText(this,"Pass: "+password, Toast.LENGTH_SHORT).show();
         String exType = "login";
 
-        LoginBackgroundWorker worker = new LoginBackgroundWorker(this);
+        BackgroundWorker worker = new BackgroundWorker(this);
         worker.execute(exType, username, password);
     }
 

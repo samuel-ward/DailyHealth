@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.NumberPicker;
 import android.widget.Toast;
 
+import com.example.dailyhealth.ui.login.BackgroundWorker;
 import com.google.gson.Gson;
 
 public class RegisterPage4 extends AppCompatActivity {
@@ -70,6 +71,7 @@ public class RegisterPage4 extends AppCompatActivity {
                     Gson gson = new Gson();
                     ed.putString("User", gson.toJson(user));
                     ed.commit();
+                    OnRegister();
 
                     //Intent
                     Intent i = new Intent(RegisterPage4.this, HomePageActivity.class);
@@ -80,5 +82,25 @@ public class RegisterPage4 extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    public void OnRegister(){
+        user = user.getInstance();
+        String username = user.getUsername();
+        String email = user.getEmail();
+        String password = user.getPassword();
+        String sex;
+        if(user.getSex()){
+            sex = "TRUE"; //Female
+        } else {
+            sex = "FALSE"; //Male
+        }
+        String age = ""+user.getAge();
+        String weight = ""+user.getWeight();
+        String height = ""+user.getHeight();
+        String exType = "register";
+
+        BackgroundWorker worker = new BackgroundWorker(this);
+        worker.execute(exType, username, email, password, sex, age, weight, height);
     }
 }
