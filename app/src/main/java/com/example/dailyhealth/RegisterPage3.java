@@ -27,7 +27,7 @@ public class RegisterPage3 extends AppCompatActivity {
             @Override
             public String format(int value) {
                 int temp = value*1;
-                return ""+temp;
+                return ""+temp+" kg";
             }
         };
         int MAX = 300;

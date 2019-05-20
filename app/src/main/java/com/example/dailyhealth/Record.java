@@ -17,8 +17,8 @@ public class Record implements Serializable {
     }
 
     //Retrieve
-    String getDate(){return date;}
-    String getTitle(){return title;}
+    String getDate(){return "Date:\n"+date;}
+    String getTitle(){return "Title: "+title;}
     String getDetails(){return details;}
 
 }

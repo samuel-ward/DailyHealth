@@ -32,7 +32,7 @@ public class RegisterPage4 extends AppCompatActivity {
             @Override
             public String format(int value) {
                 int temp = value*1;
-                return ""+temp;
+                return ""+temp+" cm";
             }
         };
         int MAX = 240;

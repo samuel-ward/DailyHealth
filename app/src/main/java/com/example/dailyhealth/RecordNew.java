@@ -41,7 +41,7 @@ public class RecordNew extends AppCompatActivity {
         final Button addNewRecordButton = findViewById(R.id.btn_save_record);
 
         //Variables
-        dateFormat = new SimpleDateFormat("dd-MM-yyy|HH:mm", Locale.getDefault());
+        dateFormat = new SimpleDateFormat("dd-MM-yyy\nHH:mm", Locale.getDefault());
 
         //Setting Navigation
         //Back Arrow
@@ -59,8 +59,8 @@ public class RecordNew extends AppCompatActivity {
             public void onClick(View v) {
                 try{
 
-                    date = "Date:\n"+dateFormat.format(new Date());
-                    title = "Title: "+recordTitle.getText().toString();
+                    date = dateFormat.format(new Date());
+                    title = recordTitle.getText().toString();
                     details = recordDetails.getText().toString();
                     record = new Record(date, title, details);
 

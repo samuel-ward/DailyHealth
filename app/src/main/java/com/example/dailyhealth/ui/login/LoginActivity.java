@@ -36,6 +36,8 @@ import com.google.gson.Gson;
 
 public class LoginActivity extends AppCompatActivity {
     User user;
+    EditText usernameEditText;
+    EditText passwordEditText;
 
     private LoginViewModel loginViewModel;
 
@@ -46,8 +48,8 @@ public class LoginActivity extends AppCompatActivity {
         loginViewModel = ViewModelProviders.of(this, new LoginViewModelFactory())
                 .get(LoginViewModel.class);
 
-        final EditText usernameEditText = findViewById(R.id.et_username);
-        final EditText passwordEditText = findViewById(R.id.et_password);
+        usernameEditText = findViewById(R.id.et_username);
+        passwordEditText = findViewById(R.id.et_password);
         final Button loginButton = findViewById(R.id.btn_login);
         final ProgressBar loadingProgressBar = findViewById(R.id.loading);
         final Button skipButton = findViewById(R.id.btn_skip);
@@ -94,8 +96,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        //Login Button
-        //server deatils:: Hostname: 127.0.0.1 || Port: 3306; username: root || password: 158383
+        /* Login View Model: Default
         loginViewModel.getLoginFormState().observe(this, new Observer<LoginFormState>() {
             @Override
             public void onChanged(@Nullable LoginFormState loginFormState) {
@@ -170,7 +171,7 @@ public class LoginActivity extends AppCompatActivity {
                 loginViewModel.login(usernameEditText.getText().toString(),
                         passwordEditText.getText().toString());
             }
-        });
+        }); */
     }
 
     private void updateUiWithUser(LoggedInUserView model) {
@@ -189,4 +190,14 @@ public class LoginActivity extends AppCompatActivity {
             finish();
 
     }
+
+    public void OnLogin(View view){
+        String username = usernameEditText.getText().toString();
+        String password = passwordEditText.getText().toString();
+        String exType = "login";
+
+        LoginBackgroundWorker worker = new LoginBackgroundWorker(this);
+        worker.execute(exType, username, password);
+    }
+
 }
