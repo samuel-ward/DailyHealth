@@ -10,6 +10,7 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.provider.MediaStore;
 import android.support.annotation.Nullable;
 import android.support.annotation.StringRes;
@@ -55,6 +56,9 @@ public class LoginActivity extends AppCompatActivity {
         final Button skipButton = findViewById(R.id.btn_skip);
         final Button registerButton = findViewById(R.id.btn_register);
 
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        StrictMode.setThreadPolicy(policy);
+
         //Shared Preferences
         SharedPreferences mPrefs=getSharedPreferences(getApplicationInfo().name, Context.MODE_PRIVATE);
 
@@ -95,6 +99,9 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
         });
+
+        //Login Button
+        loginButton.setEnabled(true);
 
         /* Login View Model: Default
         loginViewModel.getLoginFormState().observe(this, new Observer<LoginFormState>() {
@@ -193,7 +200,9 @@ public class LoginActivity extends AppCompatActivity {
 
     public void OnLogin(View view){
         String username = usernameEditText.getText().toString();
+        //Toast.makeText(this,"User: "+username, Toast.LENGTH_SHORT).show();
         String password = passwordEditText.getText().toString();
+        //Toast.makeText(this,"Pass: "+password, Toast.LENGTH_SHORT).show();
         String exType = "login";
 
         LoginBackgroundWorker worker = new LoginBackgroundWorker(this);
