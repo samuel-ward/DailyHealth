@@ -8,6 +8,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.NumberPicker;
 
+import java.lang.reflect.Method;
+
 public class RegisterPage2 extends AppCompatActivity {
 
     private User user;
@@ -36,6 +38,14 @@ public class RegisterPage2 extends AppCompatActivity {
         agePicker.setMinValue(MIN);
         agePicker.setMaxValue(MAX);
         agePicker.setValue((MAX-MIN)/4);
+        try{
+            //Fix First Element Issue
+            Method method = agePicker.getClass().getDeclaredMethod("changeValueByOne", boolean.class);
+            method.setAccessible(true);
+            method.invoke(agePicker, true);
+        } catch (Exception e){
+
+        }
 
         //Setting Variables
         user = (User)getIntent().getSerializableExtra("User");

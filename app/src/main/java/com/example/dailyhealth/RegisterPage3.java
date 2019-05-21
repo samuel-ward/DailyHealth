@@ -8,6 +8,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.NumberPicker;
 
+import java.lang.reflect.Method;
+
 public class RegisterPage3 extends AppCompatActivity {
 
     private User user;
@@ -35,7 +37,15 @@ public class RegisterPage3 extends AppCompatActivity {
         weightPicker.setFormatter(format);
         weightPicker.setMinValue(MIN);
         weightPicker.setMaxValue(MAX);
-        weightPicker.setValue((MAX-MIN)/2);
+        weightPicker.setValue((MAX-MIN)/4);
+        try{
+            //Fix First Element Issue
+            Method method = weightPicker.getClass().getDeclaredMethod("changeValueByOne", boolean.class);
+            method.setAccessible(true);
+            method.invoke(weightPicker, true);
+        } catch (Exception e){
+
+        }
 
         //Setting Variables
         user = (User)getIntent().getSerializableExtra("User");

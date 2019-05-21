@@ -9,6 +9,8 @@ import android.widget.ImageView;
 import android.widget.NumberPicker;
 import android.widget.Toast;
 
+import java.lang.reflect.Method;
+
 public class MeasurementPage6 extends AppCompatActivity {
 
     @Override
@@ -36,6 +38,14 @@ public class MeasurementPage6 extends AppCompatActivity {
         heartRatePicker.setMinValue(MIN);
         heartRatePicker.setMaxValue(MAX);
         heartRatePicker.setValue((MAX-MIN)/2);
+        try{
+            //Fix First Element Issue
+            Method method = heartRatePicker.getClass().getDeclaredMethod("changeValueByOne", boolean.class);
+            method.setAccessible(true);
+            method.invoke(heartRatePicker, true);
+        } catch (Exception e){
+
+        }
 
         //Setting Navigation
         //Back Arrow

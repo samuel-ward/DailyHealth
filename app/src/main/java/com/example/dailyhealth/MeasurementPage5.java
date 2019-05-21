@@ -12,6 +12,7 @@ import android.widget.Toast;
 public class MeasurementPage5 extends AppCompatActivity {
 
     int respiratoryEffort;
+    private boolean selection;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,11 +27,15 @@ public class MeasurementPage5 extends AppCompatActivity {
         final ImageView option3 = findViewById(R.id.btn_opt3);
         final ImageView option4 = findViewById(R.id.btn_opt4);
 
+        //Setting Variables
+        selection = false;
+
         //Option Select
         option1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 respiratoryEffort = 0;
+                selection = true;
                 option1.setImageTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorDBlue)));
                 option2.setImageTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorLBlue)));
                 option3.setImageTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorLBlue)));
@@ -41,6 +46,7 @@ public class MeasurementPage5 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 respiratoryEffort = 1;
+                selection = true;
                 option1.setImageTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorLBlue)));
                 option2.setImageTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorDBlue)));
                 option3.setImageTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorLBlue)));
@@ -51,6 +57,7 @@ public class MeasurementPage5 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 respiratoryEffort = 2;
+                selection = true;
                 option1.setImageTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorLBlue)));
                 option2.setImageTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorLBlue)));
                 option3.setImageTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorDBlue)));
@@ -61,6 +68,7 @@ public class MeasurementPage5 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 respiratoryEffort = 3;
+                selection = true;
                 option1.setImageTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorLBlue)));
                 option2.setImageTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorLBlue)));
                 option3.setImageTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorLBlue)));
@@ -82,19 +90,22 @@ public class MeasurementPage5 extends AppCompatActivity {
         forwardButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                try{
+                if(selection){
+                    try{
+                        AsthmaMeasurement measurement;
+                        //Toast.makeText(MeasurementPage5.this, "You have chosen " + respiratoryEffort, Toast.LENGTH_LONG).show();
+                        measurement = (AsthmaMeasurement) getIntent().getSerializableExtra("Measurement");
+                        measurement.setSentenceFormation(respiratoryEffort);
 
-                    AsthmaMeasurement measurement;
-                    //Toast.makeText(MeasurementPage5.this, "You have chosen " + respiratoryEffort, Toast.LENGTH_LONG).show();
-                    measurement = (AsthmaMeasurement) getIntent().getSerializableExtra("Measurement");
-                    measurement.setSentenceFormation(respiratoryEffort);
+                        Intent i = new Intent(MeasurementPage5.this, MeasurementPage6.class);
+                        i.putExtra("Measurement", measurement);
+                        startActivityForResult(i,1);
 
-                    Intent i = new Intent(MeasurementPage5.this, MeasurementPage6.class);
-                    i.putExtra("Measurement", measurement);
-                    startActivityForResult(i,1);
+                    }catch(Exception e){
 
-                }catch(Exception e){
-                    //Toast.makeText(MeasurementPage5.this, "Please choose an option", Toast.LENGTH_LONG).show();
+                    }
+                } else {
+                    Toast.makeText(MeasurementPage5.this, "Please choose an option", Toast.LENGTH_LONG).show();
                 }
             }
         });

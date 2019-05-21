@@ -145,8 +145,9 @@ public class BackgroundWorker extends AsyncTask<String, Void, String> {
     @Override
     protected void onPostExecute(String result) {
         //super.onPostExecute(result);
-        alertDialog.setMessage(result);
-        alertDialog.show();
+        //alertDialog.setMessage(result);
+        //alertDialog.show();
+        Toast.makeText(context,"Login Status: "+result,Toast.LENGTH_LONG).show();
     }
 
     @Override

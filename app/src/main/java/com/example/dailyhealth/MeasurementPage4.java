@@ -9,6 +9,8 @@ import android.widget.ImageView;
 import android.widget.NumberPicker;
 import android.widget.Toast;
 
+import java.lang.reflect.Method;
+
 public class MeasurementPage4 extends AppCompatActivity {
 
     @Override
@@ -36,6 +38,14 @@ public class MeasurementPage4 extends AppCompatActivity {
         respiratoryRatePicker.setMinValue(MIN);
         respiratoryRatePicker.setMaxValue(MAX);
         respiratoryRatePicker.setValue((MAX-MIN)/2);
+        try{
+            //Fix First Element Issue
+            Method method = respiratoryRatePicker.getClass().getDeclaredMethod("changeValueByOne", boolean.class);
+            method.setAccessible(true);
+            method.invoke(respiratoryRatePicker, true);
+        } catch (Exception e){
+
+        }
 
         //Setting Navigation
         //Back Arrow

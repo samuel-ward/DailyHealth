@@ -14,6 +14,8 @@ import android.widget.Toast;
 import com.example.dailyhealth.ui.login.BackgroundWorker;
 import com.google.gson.Gson;
 
+import java.lang.reflect.Method;
+
 public class RegisterPage4 extends AppCompatActivity {
 
     private User user;
@@ -41,7 +43,15 @@ public class RegisterPage4 extends AppCompatActivity {
         heightPicker.setFormatter(format);
         heightPicker.setMinValue(MIN);
         heightPicker.setMaxValue(MAX);
-        heightPicker.setValue((MAX-MIN)/2);
+        heightPicker.setValue((MAX-MIN)/3);
+        try{
+            //Fix First Element Issue
+            Method method = heightPicker.getClass().getDeclaredMethod("changeValueByOne", boolean.class);
+            method.setAccessible(true);
+            method.invoke(heightPicker, true);
+        } catch (Exception e){
+
+        }
 
         //Setting Variables
         user = (User)getIntent().getSerializableExtra("User");
@@ -65,39 +75,42 @@ public class RegisterPage4 extends AppCompatActivity {
                     user.setHeight(heightPicker.getValue());
                     user.setRegistered(true);
 
+                    //Register to Database
+                    OnRegister(user);
+
                     //File
                     SharedPreferences mPrefs=getSharedPreferences(getApplicationInfo().name, Context.MODE_PRIVATE);
                     SharedPreferences.Editor ed=mPrefs.edit();
                     Gson gson = new Gson();
                     ed.putString("User", gson.toJson(user));
                     ed.commit();
-                    OnRegister();
 
                     //Intent
                     Intent i = new Intent(RegisterPage4.this, HomePageActivity.class);
                     i.putExtra("User", user);
                     startActivity(i);
                 }catch(Exception e){
-
+                    Toast.makeText(RegisterPage4.this,"Registration failed: "+e.getMessage(),Toast.LENGTH_LONG).show();
                 }
             }
         });
     }
 
-    public void OnRegister(){
-        user = user.getInstance();
-        String username = user.getUsername();
-        String email = user.getEmail();
-        String password = user.getPassword();
+    public void OnRegister(User u){
+        //user = user.getInstance();
+        String username = u.getUsername();
+        String email = u.getEmail();
+        String password = u.getPassword();
         String sex;
-        if(user.getSex()){
-            sex = "TRUE"; //Female
+        Boolean sexb = u.getSex();
+        if(sexb){
+            sex = "1"; //Male
         } else {
-            sex = "FALSE"; //Male
+            sex = "0"; //Female
         }
-        String age = ""+user.getAge();
-        String weight = ""+user.getWeight();
-        String height = ""+user.getHeight();
+        String age = ""+u.getAge();
+        String weight = ""+u.getWeight();
+        String height = ""+u.getHeight();
         String exType = "register";
 
         BackgroundWorker worker = new BackgroundWorker(this);

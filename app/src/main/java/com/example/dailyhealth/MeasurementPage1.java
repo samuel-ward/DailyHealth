@@ -9,6 +9,8 @@ import android.widget.ImageView;
 import android.widget.NumberPicker;
 import android.widget.Toast;
 
+import java.lang.reflect.Method;
+
 public class MeasurementPage1 extends AppCompatActivity {
 
     @Override
@@ -35,6 +37,14 @@ public class MeasurementPage1 extends AppCompatActivity {
         measuredFlowPicker.setMinValue(MIN);
         measuredFlowPicker.setMaxValue(MAX);
         measuredFlowPicker.setValue((MAX-MIN)/2);
+        try{
+            //Fix First Element Issue
+            Method method = measuredFlowPicker.getClass().getDeclaredMethod("changeValueByOne", boolean.class);
+            method.setAccessible(true);
+            method.invoke(measuredFlowPicker, true);
+        } catch (Exception e){
+
+        }
 
         //Setting Navigation
         //Back Arrow

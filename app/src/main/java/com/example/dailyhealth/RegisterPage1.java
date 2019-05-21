@@ -7,11 +7,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 public class RegisterPage1 extends AppCompatActivity {
 
     private User user;
     private boolean sex;
+    private int select;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +28,7 @@ public class RegisterPage1 extends AppCompatActivity {
 
         //Setting Variables
         user = (User)getIntent().getSerializableExtra("User");
+        select = 0;
 
         //Buttons
         maleButton.setOnClickListener(new View.OnClickListener() {
@@ -34,6 +37,7 @@ public class RegisterPage1 extends AppCompatActivity {
                 sex = true;
                 maleButton.setImageTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorDBlue)));
                 femaleButton.setImageTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorLBlue)));
+                select = 1;
             }
         });
         femaleButton.setOnClickListener(new View.OnClickListener() {
@@ -42,6 +46,7 @@ public class RegisterPage1 extends AppCompatActivity {
                 sex = false;
                 maleButton.setImageTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorLBlue)));
                 femaleButton.setImageTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorDBlue)));
+                select = 2;
             }
         });
 
@@ -59,13 +64,17 @@ public class RegisterPage1 extends AppCompatActivity {
         forwardButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                try{
-                    user.setSex(sex);
-                    Intent i = new Intent(RegisterPage1.this, RegisterPage2.class);
-                    i.putExtra("User",user);
-                    startActivity(i);
-                }catch(Exception e){
+                if(select > 0){
+                    try{
+                        user.setSex(sex);
+                        Intent i = new Intent(RegisterPage1.this, RegisterPage2.class);
+                        i.putExtra("User",user);
+                        startActivity(i);
+                    }catch(Exception e){
 
+                    }
+                } else {
+                    Toast.makeText(RegisterPage1.this,"Please select a sex",Toast.LENGTH_SHORT).show();
                 }
             }
         });
