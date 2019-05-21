@@ -1,6 +1,7 @@
 package com.example.dailyhealth;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 public class User implements Serializable {
     //Private
@@ -13,6 +14,7 @@ public class User implements Serializable {
     private int height;
     private static User instance;
     private Boolean registered;
+    private ArrayList<Record> recordList;
 
     //Singleton
     private User(){
@@ -25,6 +27,7 @@ public class User implements Serializable {
         weight = 0;
         height = 0;
         registered = false;
+        recordList = null;
     }
 
     //Public
@@ -35,20 +38,22 @@ public class User implements Serializable {
     }
 
     // Set/Get
-    void setUsername(String reading){username=reading;}
-    void setEmail(String reading){email=reading;}
-    void setPassword(String reading){password=reading;}
-    void setSex(Boolean reading){sex=reading;}
-    void setAge(int reading){age=reading;}
-    void setWeight(int reading){weight=reading;}
-    void setHeight(int reading){height=reading;}
-    void setRegistered(Boolean reading){registered=reading;}
-    String getUsername(){return username;}
-    String getEmail(){return email;}
-    String getPassword(){return password;}
-    Boolean getSex(){return sex;}
-    int getAge(){return age;}
-    int getWeight(){return weight;}
-    int getHeight(){return height;}
-    Boolean getRegistered(){return registered;}
+    public void setUsername(String reading){username=reading;}
+    public void setEmail(String reading){email=reading;}
+    public void setPassword(String reading){password=reading;}
+    public void setSex(Boolean reading){sex=reading;}
+    public void setAge(int reading){age=reading;}
+    public void setWeight(int reading){weight=reading;}
+    public void setHeight(int reading){height=reading;}
+    public void setRegistered(Boolean reading){registered=reading;}
+    public void setRecordList(ArrayList<Record> reading){recordList=reading;}
+    public String getUsername(){return username;}
+    public String getEmail(){return email;}
+    public String getPassword(){return password;}
+    public Boolean getSex(){return sex;}
+    public int getAge(){return age;}
+    public int getWeight(){return weight;}
+    public int getHeight(){return height;}
+    public Boolean getRegistered(){return registered;}
+    public ArrayList<Record> getRecordList(){return recordList;}
 }

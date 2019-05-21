@@ -38,7 +38,7 @@ public class RecordIntro extends AppCompatActivity {
     private ListView recordList;
     private RecordAdapter adapter;
     private ArrayList<Record> list;
-    private ArrayList<Record> list2;
+    private User user;
 
     public class RecordAdapter extends ArrayAdapter<Record> {
         public RecordAdapter(Context context, ArrayList<Record> records) {
@@ -102,6 +102,19 @@ public class RecordIntro extends AppCompatActivity {
         super.onResume();
 
         //Setting Variables
+        user = user.getInstance();
+        try{
+            list = user.getRecordList();
+
+            //Populating List View
+            Collections.reverse(list);
+            RecordAdapter adapter = new RecordAdapter(this, list);
+            recordList.setAdapter(adapter);
+        }catch(Exception e){
+            Toast.makeText(RecordIntro.this,e.getMessage(),Toast.LENGTH_LONG).show();
+        }
+
+        /*Separated Records
         SharedPreferences mPrefs=getSharedPreferences(getApplicationInfo().name, Context.MODE_PRIVATE);
 
         if(mPrefs.contains("RecordList")){
@@ -119,6 +132,6 @@ public class RecordIntro extends AppCompatActivity {
             }catch(Exception e){
                 Toast.makeText(RecordIntro.this,e.getMessage(),Toast.LENGTH_LONG).show();
             }
-        }
+        }*/
     }
 }

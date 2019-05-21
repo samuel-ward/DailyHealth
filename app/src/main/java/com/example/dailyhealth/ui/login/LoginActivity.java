@@ -54,9 +54,11 @@ public class LoginActivity extends AppCompatActivity {
             String json = mPrefs.getString("User", null);
             user = gson.fromJson(json, User.class);
 
-            Intent i = new Intent(LoginActivity.this, HomePageActivity.class);
-            i.putExtra("User", user);
-            startActivity(i);
+            if(user.getRegistered()){
+                Intent i = new Intent(LoginActivity.this, HomePageActivity.class);
+                i.putExtra("User", user);
+                startActivity(i);
+            }
         }
 
         //Skip Button
@@ -189,10 +191,27 @@ public class LoginActivity extends AppCompatActivity {
         //Toast.makeText(this,"User: "+username, Toast.LENGTH_SHORT).show();
         String password = passwordEditText.getText().toString();
         //Toast.makeText(this,"Pass: "+password, Toast.LENGTH_SHORT).show();
-        String exType = "login";
+        String exType = "login2";
 
         BackgroundWorker worker = new BackgroundWorker(this);
         worker.execute(exType, username, password);
+
+
+        try{
+            //File
+            SharedPreferences mPrefs=getSharedPreferences(getApplicationInfo().name, Context.MODE_PRIVATE);
+            SharedPreferences.Editor ed=mPrefs.edit();
+            Gson gson = new Gson();
+            ed.putString("User", gson.toJson(user));
+            ed.commit();
+
+            //Intent
+            Intent i = new Intent(LoginActivity.this, HomePageActivity.class);
+            i.putExtra("User", user);
+            startActivity(i);
+        }catch(Exception e){
+            Toast.makeText(LoginActivity.this,"Registration failed: "+e.getMessage(),Toast.LENGTH_LONG).show();
+        }
     }
 
 }

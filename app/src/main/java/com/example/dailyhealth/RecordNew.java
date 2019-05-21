@@ -1,6 +1,7 @@
 package com.example.dailyhealth;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,8 +11,12 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.example.dailyhealth.ui.login.BackgroundWorker;
+import com.example.dailyhealth.ui.login.LoginActivity;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+
+import org.json.JSONObject;
 
 import java.lang.reflect.Type;
 import java.text.SimpleDateFormat;
@@ -21,6 +26,8 @@ import java.util.List;
 import java.util.Locale;
 
 public class RecordNew extends AppCompatActivity {
+
+    private User user;
 
     private SimpleDateFormat dateFormat;
     private String date;
@@ -42,6 +49,7 @@ public class RecordNew extends AppCompatActivity {
 
         //Variables
         dateFormat = new SimpleDateFormat("dd-MM-yyy\nHH:mm", Locale.getDefault());
+        user = user.getInstance();
 
         //Setting Navigation
         //Back Arrow
@@ -69,6 +77,7 @@ public class RecordNew extends AppCompatActivity {
                     SharedPreferences.Editor ed=mPrefs.edit();
                     Gson gson = new Gson();
 
+                    /*
                     if(mPrefs.contains("RecordList")){
                         String json = mPrefs.getString("RecordList", null);
                         list = gson.fromJson(json,
@@ -83,9 +92,14 @@ public class RecordNew extends AppCompatActivity {
                     } else {
                         list = new ArrayList<>();
                         list.add(record);
-                    }
+                    }*/
 
-                    ed.putString("RecordList", gson.toJson(list));
+                    //Update Database
+                    user.setRecordList(list);
+                    OnUpdate(gson.toJson(list),user);
+
+                    //ed.putString("RecordList", gson.toJson(list));
+                    ed.putString("User", gson.toJson(user));
                     ed.commit();
                     Toast.makeText(RecordNew.this,"Record Added",Toast.LENGTH_SHORT).show();
                     finish();
@@ -96,5 +110,16 @@ public class RecordNew extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    public void OnUpdate(String s, User u){
+        u = user.getInstance();
+        String username = u.getUsername();
+        String password = u.getPassword();
+        //s = records
+        String exType = "update";
+
+        BackgroundWorker worker = new BackgroundWorker(this);
+        worker.execute(exType, username, password, s);
     }
 }
