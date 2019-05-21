@@ -112,7 +112,7 @@ public class RecordIntro extends AppCompatActivity {
             RecordAdapter adapter = new RecordAdapter(this, list);
             recordList.setAdapter(adapter);
         }catch(Exception e){
-            Toast.makeText(RecordIntro.this,e.getMessage(),Toast.LENGTH_LONG).show();
+            //Toast.makeText(RecordIntro.this,e.getMessage(),Toast.LENGTH_LONG).show();
         }
 
         /*Separated Records
