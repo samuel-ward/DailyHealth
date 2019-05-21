@@ -2,14 +2,20 @@ package com.example.dailyhealth.ui.login;
 
 import android.app.AlertDialog;
 import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.renderscript.ScriptGroup;
 import android.widget.Toast;
 
+import com.example.dailyhealth.HomePageActivity;
 import com.example.dailyhealth.Record;
 import com.example.dailyhealth.User;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -50,7 +56,8 @@ public class BackgroundWorker extends AsyncTask<String, Void, String> {
         String get_user_url = "http://192.168.1.64/get_user.php";
 
         if(type.equals("login")){
-            //Login
+            //Login -- Only show's if user is in the database
+            //Use "get_user" if you want to get the information as well.
             try{
                 String username = params[1];
                 String password = params[2];
@@ -144,7 +151,7 @@ public class BackgroundWorker extends AsyncTask<String, Void, String> {
                 return e.getMessage();
             }
         } else if(type.equals("update")){
-            //Update
+            //Update -- Used to update only the records
             try{
                 String username = params[1];
                 String password = params[2];
@@ -188,7 +195,8 @@ public class BackgroundWorker extends AsyncTask<String, Void, String> {
                 return e.getMessage();
             }
         } else if(type.equals("login2")){
-            //Java Connection -- Didin't Work
+            //Java Connection -- Didn't Work at all
+            //User "get_user"
             try{
                 String user_name = params[1];
                 String password = params[2];
@@ -240,9 +248,11 @@ public class BackgroundWorker extends AsyncTask<String, Void, String> {
             try{
                 String username = params[1];
                 String password = params[2];
+                user = user.getInstance();
+                ArrayList<Record> list;
 
                 //Connection to Database
-                URL url = new URL(login_url);
+                URL url = new URL(get_user_url);
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
                 httpURLConnection.setRequestMethod("POST");
                 httpURLConnection.setDoOutput(true);
@@ -269,7 +279,42 @@ public class BackgroundWorker extends AsyncTask<String, Void, String> {
                 reader.close();
                 inputStream.close();
                 httpURLConnection.disconnect();
-                return result;
+
+                //Work with output
+                if(result.equals("Login unsuccessful")){
+                    return result;
+                }
+                //JSONArray jsonArray = new JSONArray(result);
+                JSONObject json = new JSONObject(result);
+                //json = jsonArray.getJSONObject(0);
+                //Get Data
+                String name = json.getString("username");
+                String email = json.getString("email");
+                String pass = json.getString("password");
+                int sex = json.getInt("sex");
+                int age = json.getInt("age");
+                int weight = json.getInt("weight");
+                int height = json.getInt("height");
+                String records = json.getString("records");
+
+                //Populate User
+                user.setUsername(name);
+                user.setEmail(email);
+                user.setPassword(pass);
+                if(sex == 0){
+                    user.setSex(false);
+                } else {
+                    user.setSex(true);
+                }
+                user.setAge(age);
+                user.setWeight(weight);
+                user.setHeight(height);
+                Gson gson = new Gson();
+                list = gson.fromJson(records, new TypeToken<List<Record>>(){}.getType());
+                user.setRecordList(list);
+                user.setRegistered(true);
+
+                return "Login Successful";
             } catch (MalformedURLException e){
                 return e.getMessage();
             } catch (IOException e){
@@ -295,6 +340,29 @@ public class BackgroundWorker extends AsyncTask<String, Void, String> {
         //alertDialog.setMessage(result);
         //alertDialog.show();
         Toast.makeText(context,"Login Status: "+result,Toast.LENGTH_LONG).show();
+
+        if(result.equals("Login Successful")){
+
+
+            try{
+                user = user.getInstance();
+                if(user.getRegistered()){
+                    //File
+                    SharedPreferences mPrefs=context.getSharedPreferences(context.getApplicationInfo().name, Context.MODE_PRIVATE);
+                    SharedPreferences.Editor ed=mPrefs.edit();
+                    Gson gson = new Gson();
+                    ed.putString("User", gson.toJson(user));
+                    ed.commit();
+
+                    //Intent
+                    Intent i = new Intent(context, HomePageActivity.class);
+                    i.putExtra("User", user);
+                    context.startActivity(i);
+                }
+            }catch(Exception e){
+                Toast.makeText(context,"Registration failed: "+e.getMessage(),Toast.LENGTH_LONG).show();
+            }
+        }
     }
 
     @Override

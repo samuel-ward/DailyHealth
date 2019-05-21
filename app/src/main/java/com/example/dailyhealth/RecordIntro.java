@@ -75,6 +75,7 @@ public class RecordIntro extends AppCompatActivity {
         final ImageView backArrowButton = findViewById(R.id.icon_back_arrow);
         final Button newRecordButton = findViewById(R.id.btn_add_record);
         recordList = findViewById(R.id.lv_records);
+        user = user.getInstance();
 
         //Setting Navigation
         //Back Arrow

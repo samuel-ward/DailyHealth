@@ -32,8 +32,6 @@ public class LoginActivity extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        loginViewModel = ViewModelProviders.of(this, new LoginViewModelFactory())
-                .get(LoginViewModel.class);
 
         usernameEditText = findViewById(R.id.et_username);
         passwordEditText = findViewById(R.id.et_password);
@@ -90,83 +88,6 @@ public class LoginActivity extends AppCompatActivity {
 
         //Login Button
         loginButton.setEnabled(true);
-
-        /* Login View Model: Default
-        loginViewModel.getLoginFormState().observe(this, new Observer<LoginFormState>() {
-            @Override
-            public void onChanged(@Nullable LoginFormState loginFormState) {
-                if (loginFormState == null) {
-                    return;
-                }
-                loginButton.setEnabled(loginFormState.isDataValid());
-                if (loginFormState.getUsernameError() != null) {
-                    usernameEditText.setError(getString(loginFormState.getUsernameError()));
-                }
-                if (loginFormState.getPasswordError() != null) {
-                    passwordEditText.setError(getString(loginFormState.getPasswordError()));
-                }
-            }
-        });
-
-        loginViewModel.getLoginResult().observe(this, new Observer<LoginResult>() {
-            @Override
-            public void onChanged(@Nullable LoginResult loginResult) {
-                if (loginResult == null) {
-                    return;
-                }
-                loadingProgressBar.setVisibility(View.GONE);
-                if (loginResult.getError() != null) {
-                    showLoginFailed(loginResult.getError());
-                }
-                if (loginResult.getSuccess() != null) {
-                    updateUiWithUser(loginResult.getSuccess());
-                }
-                setResult(Activity.RESULT_OK);
-
-                //Complete and destroy login activity once successful
-                finish();
-            }
-        });
-
-        TextWatcher afterTextChangedListener = new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-                // ignore
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                // ignore
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-                loginViewModel.loginDataChanged(usernameEditText.getText().toString(),
-                        passwordEditText.getText().toString());
-            }
-        };
-        usernameEditText.addTextChangedListener(afterTextChangedListener);
-        passwordEditText.addTextChangedListener(afterTextChangedListener);
-        passwordEditText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-
-            @Override
-            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-                if (actionId == EditorInfo.IME_ACTION_DONE) {
-                    loginViewModel.login(usernameEditText.getText().toString(),
-                            passwordEditText.getText().toString());
-                }
-                return false;
-            }
-        });
-
-        loginButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                loadingProgressBar.setVisibility(View.VISIBLE);
-                loginViewModel.login(usernameEditText.getText().toString(),
-                        passwordEditText.getText().toString());
-            }
-        }); */
     }
 
     private void updateUiWithUser(LoggedInUserView model) {
@@ -191,24 +112,26 @@ public class LoginActivity extends AppCompatActivity {
         //Toast.makeText(this,"User: "+username, Toast.LENGTH_SHORT).show();
         String password = passwordEditText.getText().toString();
         //Toast.makeText(this,"Pass: "+password, Toast.LENGTH_SHORT).show();
-        String exType = "login2";
+        String exType = "get_user";
 
         BackgroundWorker worker = new BackgroundWorker(this);
         worker.execute(exType, username, password);
 
-
         try{
-            //File
-            SharedPreferences mPrefs=getSharedPreferences(getApplicationInfo().name, Context.MODE_PRIVATE);
-            SharedPreferences.Editor ed=mPrefs.edit();
-            Gson gson = new Gson();
-            ed.putString("User", gson.toJson(user));
-            ed.commit();
+            user = user.getInstance();
+            if(user.getRegistered()){
+                //File
+                SharedPreferences mPrefs=getSharedPreferences(getApplicationInfo().name, Context.MODE_PRIVATE);
+                SharedPreferences.Editor ed=mPrefs.edit();
+                Gson gson = new Gson();
+                ed.putString("User", gson.toJson(user));
+                ed.commit();
 
-            //Intent
-            Intent i = new Intent(LoginActivity.this, HomePageActivity.class);
-            i.putExtra("User", user);
-            startActivity(i);
+                //Intent
+                Intent i = new Intent(LoginActivity.this, HomePageActivity.class);
+                i.putExtra("User", user);
+                startActivity(i);
+            }
         }catch(Exception e){
             Toast.makeText(LoginActivity.this,"Registration failed: "+e.getMessage(),Toast.LENGTH_LONG).show();
         }

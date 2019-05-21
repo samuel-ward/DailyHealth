@@ -66,7 +66,7 @@ public class RecordNew extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 try{
-
+                    user = user.getInstance();
                     date = dateFormat.format(new Date());
                     title = recordTitle.getText().toString();
                     details = recordDetails.getText().toString();
@@ -76,6 +76,13 @@ public class RecordNew extends AppCompatActivity {
                     SharedPreferences mPrefs=getSharedPreferences(getApplicationInfo().name, Context.MODE_PRIVATE);
                     SharedPreferences.Editor ed=mPrefs.edit();
                     Gson gson = new Gson();
+
+                    //Add Record to list
+                    list = user.getRecordList();
+                    if(list == null){
+                        list = new ArrayList<>();
+                    }
+                    list.add(record);
 
                     /*
                     if(mPrefs.contains("RecordList")){
